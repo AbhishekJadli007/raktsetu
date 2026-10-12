@@ -149,7 +149,7 @@ uvicorn api.main:app --port 8000          # open http://localhost:8000
 
 For frontend development, run `npm run dev` in `web/` (it proxies `/api` to port 8000).
 **Docker:** `docker build -t raktsetu . && docker run -p 8000:8000 raktsetu`.
-**Deploy (free):** `deploy/huggingface.sh <your-hf-username>` pushes to a Hugging Face Docker Space (see [`deploy/README.md`](deploy/README.md)).
+**Deploy (free):** `python deploy/huggingface.py` uploads to a free Hugging Face Space (see [`deploy/README.md`](deploy/README.md)).
 
 ## Usage
 

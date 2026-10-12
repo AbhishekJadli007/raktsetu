@@ -1,24 +1,32 @@
 # Deploying RaktSetu
 
-The app is one Docker container (FastAPI serves the API and the built React app on port 8000). No secrets are needed.
+The app is one Python web server: FastAPI serves the API and the built React app. No secrets are needed.
+The demo flows are precomputed in `artifacts/cache/`, so even a small server answers them instantly.
 
 ## Hugging Face Spaces (free, recommended)
 
-Free CPU Spaces give 2 vCPU and 16 GB RAM, enough for live simulations. The demo flows are precomputed in `artifacts/cache/`, so they answer instantly.
+Hugging Face **Docker** Spaces are paid, but **Gradio** Spaces on *CPU basic* (2 vCPU, 16 GB) are free.
+A Gradio Space just runs `python app.py`, so `deploy/hf_app.py` uses it to start our FastAPI server. We don't use Gradio's UI.
 
-1. Sign up at https://huggingface.co/join.
-2. **New Space** at https://huggingface.co/new-space. Name `raktsetu`, licence MIT, **SDK: Docker**, template **Blank**, hardware **CPU basic (free)**, **Public**. Click *Create Space*.
-3. **Token** at https://huggingface.co/settings/tokens. Click *Create new token*, type **Write**, and copy it.
-4. From the repository root, after committing: `deploy/huggingface.sh <your-hf-username>`. Username = your HF username, password = the token.
-5. Open `https://huggingface.co/spaces/<user>/raktsetu` and wait for the build (3–6 min, it shows *Running*). The app is at `https://<user>-raktsetu.hf.space`.
-6. Add the link to the README: `python scripts/personalize.py --hf <your-hf-username>`, then commit and push to GitHub.
+1. Sign up at https://huggingface.co/join and verify your email.
+2. Create a token at https://huggingface.co/settings/tokens: *Create new token*, type **Write**, create, and copy it (starts with `hf_`).
+3. From the repository root, after committing your changes:
+   ```bash
+   source .venv/bin/activate
+   pip install huggingface_hub           # already in requirements-dev.txt
+   python deploy/huggingface.py          # paste the token when asked (typing is hidden)
+   ```
+   The script builds the web app, packages the **last commit** plus the build, creates the Space `<you>/raktsetu` if needed (Gradio SDK, free CPU), and uploads.
+4. Open `https://huggingface.co/spaces/<you>/raktsetu`. It shows *Building* for 3–6 minutes, then *Running*. The app is at `https://<you>-raktsetu.hf.space`.
+5. Add the link to the README: `python scripts/personalize.py --hf <you>`, then commit and push.
 
-To redeploy after changes: commit, then run step 4 again. If you changed the engine, run `python -m raktsetu precompute` before committing.
-Free Spaces sleep after ~48 h without visitors. Open the link a few minutes before judging so it is awake.
+To redeploy: commit, then run step 3 again. If you changed the engine, run `python -m raktsetu precompute --fresh` first.
+To test the exact upload locally: `python deploy/huggingface.py --dry-run`, then `cd <printed folder> && python app.py` and open http://localhost:7860.
+Free Spaces sleep after ~48 h without visitors. Open the link a few minutes before judging so it's awake.
 
-## Render (alternative)
+## Render (alternative, uses the Dockerfile)
 
-New → Web Service → connect the GitHub repo → it detects the `Dockerfile` → Instance type *Free* → Deploy.
+New → Web Service → connect the GitHub repo → it detects the `Dockerfile` → instance type *Free* → Deploy.
 The free plan has very little CPU: precomputed demo flows are instant, but custom simulations can take minutes.
 
 ## Any Docker host
