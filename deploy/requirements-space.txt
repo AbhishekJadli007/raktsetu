@@ -1,0 +1,12 @@
+# Requirements for the Hugging Face Space. They work on Python 3.10 AND 3.11, because ZeroGPU hardware
+# forces Python 3.10 while CPU basic uses 3.11. scikit-learn 1.8+ needs 3.11, so the Space uses 1.7.2
+# and retrains its models on first start (deploy/hf_app.py). Local development keeps requirements.txt.
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.7.2
+ortools==9.15.6755
+joblib>=1.4
+requests>=2.31
+fastapi>=0.115
+uvicorn>=0.30
+pydantic>=2.7
