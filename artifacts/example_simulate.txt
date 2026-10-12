@@ -1,0 +1,4 @@
+policy       RBC fill   PLT fill  RBC waste  PLT waste      unmet    expired      trips         km
+isolated        94.1%      76.6%      12.5%      14.2%      4,297      4,703          0          0
+reactive        96.7%      84.7%      10.5%       5.0%      2,685      3,158        588      2,542
+raktsetu        99.4%      86.4%       5.5%       3.1%      1,879      1,708        947      4,976

@@ -1,0 +1,2514 @@
+{
+  "generated_at": "2026-10-12T16:24:13",
+  "quick": false,
+  "forecast": {
+    "test_period": "2024-01-01 to 2025-12-26",
+    "metric": "WAPE (lower is better)",
+    "results": {
+      "RBC|h+0": {
+        "RaktSetu ML": {
+          "all": 0.3317,
+          "dengue_season": 0.3225
+        },
+        "MA7 (last 7 days)": {
+          "all": 0.358,
+          "dengue_season": 0.3488
+        },
+        "Same weekday last week": {
+          "all": 0.4654,
+          "dengue_season": 0.4585
+        }
+      },
+      "RBC|h+1": {
+        "RaktSetu ML": {
+          "all": 0.3314,
+          "dengue_season": 0.3223
+        },
+        "MA7 (last 7 days)": {
+          "all": 0.3583,
+          "dengue_season": 0.352
+        },
+        "Same weekday last week": {
+          "all": 0.4653,
+          "dengue_season": 0.4573
+        }
+      },
+      "RBC|h+2": {
+        "RaktSetu ML": {
+          "all": 0.3318,
+          "dengue_season": 0.3214
+        },
+        "MA7 (last 7 days)": {
+          "all": 0.3572,
+          "dengue_season": 0.3474
+        },
+        "Same weekday last week": {
+          "all": 0.4653,
+          "dengue_season": 0.4559
+        }
+      },
+      "RBC|h+3": {
+        "RaktSetu ML": {
+          "all": 0.332,
+          "dengue_season": 0.3225
+        },
+        "MA7 (last 7 days)": {
+          "all": 0.3585,
+          "dengue_season": 0.3492
+        },
+        "Same weekday last week": {
+          "all": 0.4653,
+          "dengue_season": 0.4576
+        }
+      },
+      "RBC|h+4": {
+        "RaktSetu ML": {
+          "all": 0.3318,
+          "dengue_season": 0.3229
+        },
+        "MA7 (last 7 days)": {
+          "all": 0.3573,
+          "dengue_season": 0.351
+        },
+        "Same weekday last week": {
+          "all": 0.4653,
+          "dengue_season": 0.4589
+        }
+      },
+      "PLT|h+0": {
+        "RaktSetu ML": {
+          "all": 0.5283,
+          "dengue_season": 0.476
+        },
+        "MA7 (last 7 days)": {
+          "all": 0.5558,
+          "dengue_season": 0.4936
+        },
+        "Same weekday last week": {
+          "all": 0.7171,
+          "dengue_season": 0.6435
+        }
+      },
+      "PLT|h+1": {
+        "RaktSetu ML": {
+          "all": 0.5269,
+          "dengue_season": 0.4742
+        },
+        "MA7 (last 7 days)": {
+          "all": 0.5561,
+          "dengue_season": 0.4957
+        },
+        "Same weekday last week": {
+          "all": 0.7168,
+          "dengue_season": 0.6444
+        }
+      },
+      "PLT|h+2": {
+        "RaktSetu ML": {
+          "all": 0.5273,
+          "dengue_season": 0.4746
+        },
+        "MA7 (last 7 days)": {
+          "all": 0.5573,
+          "dengue_season": 0.4997
+        },
+        "Same weekday last week": {
+          "all": 0.7171,
+          "dengue_season": 0.644
+        }
+      }
+    },
+    "noise_floor": {
+      "RBC": 0.3306,
+      "PLT": 0.5146
+    },
+    "note": "noise_floor = WAPE of the true expected demand; daily counts per bank are inherently noisy."
+  },
+  "feature_importance": {
+    "baseline_wape": 0.4497,
+    "increase_in_wape_when_shuffled": {
+      "ma28": 0.3448,
+      "city_trend": 0.0437,
+      "ma7": 0.0216,
+      "bank": 0.0075,
+      "dow": 0.0059,
+      "ma7_prev": 0.0023,
+      "doy_sin": 0.0005,
+      "rain_14_28": 0.0004,
+      "city_ma7": 0.0003,
+      "rain_28_56": 0.0003,
+      "temp_14": 0.0003,
+      "h": 0.0,
+      "doy_cos": 0.0,
+      "lag1": -0.0,
+      "ma91": 0.0,
+      "city_ma28": 0.0,
+      "rain_0_14": 0.0,
+      "trend": -0.0001,
+      "hum_14": -0.0001,
+      "rain_56_84": -0.0002,
+      "temp_28_56": -0.0002
+    }
+  },
+  "surge_radar": {
+    "test_period": "2024-01-01 to 2025-12-31",
+    "target": "mean daily city-wide platelet requests in week k ahead",
+    "metric": "WAPE (lower is better)",
+    "ramp_up_window": "forecasts issued 15 Jul - 30 Sep (as the dengue surge builds)",
+    "results": {
+      "week+1": {
+        "RaktSetu surge radar": {
+          "all": 0.1077,
+          "ramp_up": 0.1384
+        },
+        "Current level persists (MA7)": {
+          "all": 0.102,
+          "ramp_up": 0.1057
+        },
+        "Same week last year": {
+          "all": 0.3404,
+          "ramp_up": 0.499
+        }
+      },
+      "week+2": {
+        "RaktSetu surge radar": {
+          "all": 0.1188,
+          "ramp_up": 0.1652
+        },
+        "Current level persists (MA7)": {
+          "all": 0.1533,
+          "ramp_up": 0.1718
+        },
+        "Same week last year": {
+          "all": 0.3401,
+          "ramp_up": 0.5266
+        }
+      },
+      "week+3": {
+        "RaktSetu surge radar": {
+          "all": 0.1359,
+          "ramp_up": 0.2143
+        },
+        "Current level persists (MA7)": {
+          "all": 0.2047,
+          "ramp_up": 0.2311
+        },
+        "Same week last year": {
+          "all": 0.3388,
+          "ramp_up": 0.5623
+        }
+      },
+      "week+4": {
+        "RaktSetu surge radar": {
+          "all": 0.146,
+          "ramp_up": 0.2373
+        },
+        "Current level persists (MA7)": {
+          "all": 0.248,
+          "ramp_up": 0.2713
+        },
+        "Same week last year": {
+          "all": 0.3386,
+          "ramp_up": 0.571
+        }
+      }
+    }
+  },
+  "policy_runs": [
+    {
+      "seed": 42,
+      "window": "2024 dengue season",
+      "variant": "Isolated banks",
+      "rbc_fill_rate": 0.9414,
+      "plt_fill_rate": 0.766,
+      "rbc_wastage_rate": 0.1248,
+      "plt_wastage_rate": 0.1425,
+      "rbc_unmet": 1271,
+      "plt_unmet": 3026,
+      "rbc_expired": 3071,
+      "plt_expired": 1632,
+      "planned_trips": 0,
+      "emergency_trips": 0,
+      "total_km": 0.0
+    },
+    {
+      "seed": 42,
+      "window": "2024 dengue season",
+      "variant": "Phone-around (today)",
+      "rbc_fill_rate": 0.9672,
+      "plt_fill_rate": 0.8474,
+      "rbc_wastage_rate": 0.105,
+      "plt_wastage_rate": 0.0503,
+      "rbc_unmet": 711,
+      "plt_unmet": 1974,
+      "rbc_expired": 2582,
+      "plt_expired": 576,
+      "planned_trips": 0,
+      "emergency_trips": 588,
+      "total_km": 2541.9
+    },
+    {
+      "seed": 42,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + 7-day average",
+      "rbc_fill_rate": 0.9942,
+      "plt_fill_rate": 0.8656,
+      "rbc_wastage_rate": 0.0519,
+      "plt_wastage_rate": 0.0296,
+      "rbc_unmet": 126,
+      "plt_unmet": 1738,
+      "rbc_expired": 1277,
+      "plt_expired": 339,
+      "planned_trips": 721,
+      "emergency_trips": 189,
+      "total_km": 4661.7
+    },
+    {
+      "seed": 42,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + ML forecast",
+      "rbc_fill_rate": 0.9941,
+      "plt_fill_rate": 0.8675,
+      "rbc_wastage_rate": 0.0553,
+      "plt_wastage_rate": 0.0275,
+      "rbc_unmet": 128,
+      "plt_unmet": 1713,
+      "rbc_expired": 1360,
+      "plt_expired": 315,
+      "planned_trips": 727,
+      "emergency_trips": 217,
+      "total_km": 4912.0
+    },
+    {
+      "seed": 42,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + perfect forecast (bound)",
+      "rbc_fill_rate": 0.9944,
+      "plt_fill_rate": 0.8781,
+      "rbc_wastage_rate": 0.0557,
+      "plt_wastage_rate": 0.0159,
+      "rbc_unmet": 121,
+      "plt_unmet": 1576,
+      "rbc_expired": 1371,
+      "plt_expired": 182,
+      "planned_trips": 755,
+      "emergency_trips": 182,
+      "total_km": 4861.4
+    },
+    {
+      "seed": 42,
+      "window": "2025 full year",
+      "variant": "Isolated banks",
+      "rbc_fill_rate": 0.9037,
+      "plt_fill_rate": 0.8274,
+      "rbc_wastage_rate": 0.1483,
+      "plt_wastage_rate": 0.2104,
+      "rbc_unmet": 6668,
+      "plt_unmet": 3441,
+      "rbc_expired": 11090,
+      "plt_expired": 4403,
+      "planned_trips": 0,
+      "emergency_trips": 0,
+      "total_km": 0.0
+    },
+    {
+      "seed": 42,
+      "window": "2025 full year",
+      "variant": "Phone-around (today)",
+      "rbc_fill_rate": 0.9407,
+      "plt_fill_rate": 0.9204,
+      "rbc_wastage_rate": 0.1168,
+      "plt_wastage_rate": 0.1222,
+      "rbc_unmet": 4109,
+      "plt_unmet": 1586,
+      "rbc_expired": 8735,
+      "plt_expired": 2557,
+      "planned_trips": 0,
+      "emergency_trips": 2021,
+      "total_km": 8045.5
+    },
+    {
+      "seed": 42,
+      "window": "2025 full year",
+      "variant": "RaktSetu + 7-day average",
+      "rbc_fill_rate": 0.9958,
+      "plt_fill_rate": 0.9382,
+      "rbc_wastage_rate": 0.0571,
+      "plt_wastage_rate": 0.1054,
+      "rbc_unmet": 288,
+      "plt_unmet": 1232,
+      "rbc_expired": 4273,
+      "plt_expired": 2206,
+      "planned_trips": 2771,
+      "emergency_trips": 493,
+      "total_km": 17877.9
+    },
+    {
+      "seed": 42,
+      "window": "2025 full year",
+      "variant": "RaktSetu + ML forecast",
+      "rbc_fill_rate": 0.9957,
+      "plt_fill_rate": 0.9411,
+      "rbc_wastage_rate": 0.0583,
+      "plt_wastage_rate": 0.1028,
+      "rbc_unmet": 296,
+      "plt_unmet": 1174,
+      "rbc_expired": 4359,
+      "plt_expired": 2152,
+      "planned_trips": 2755,
+      "emergency_trips": 547,
+      "total_km": 18788.9
+    },
+    {
+      "seed": 42,
+      "window": "2025 full year",
+      "variant": "RaktSetu + perfect forecast (bound)",
+      "rbc_fill_rate": 0.9957,
+      "plt_fill_rate": 0.9625,
+      "rbc_wastage_rate": 0.0582,
+      "plt_wastage_rate": 0.0826,
+      "rbc_unmet": 299,
+      "plt_unmet": 748,
+      "rbc_expired": 4354,
+      "plt_expired": 1728,
+      "planned_trips": 2865,
+      "emergency_trips": 370,
+      "total_km": 18681.3
+    },
+    {
+      "seed": 43,
+      "window": "2024 dengue season",
+      "variant": "Isolated banks",
+      "rbc_fill_rate": 0.9548,
+      "plt_fill_rate": 0.7554,
+      "rbc_wastage_rate": 0.1521,
+      "plt_wastage_rate": 0.1485,
+      "rbc_unmet": 962,
+      "plt_unmet": 3175,
+      "rbc_expired": 3834,
+      "plt_expired": 1723,
+      "planned_trips": 0,
+      "emergency_trips": 0,
+      "total_km": 0.0
+    },
+    {
+      "seed": 43,
+      "window": "2024 dengue season",
+      "variant": "Phone-around (today)",
+      "rbc_fill_rate": 0.9786,
+      "plt_fill_rate": 0.8305,
+      "rbc_wastage_rate": 0.1302,
+      "plt_wastage_rate": 0.0641,
+      "rbc_unmet": 456,
+      "plt_unmet": 2200,
+      "rbc_expired": 3283,
+      "plt_expired": 744,
+      "planned_trips": 0,
+      "emergency_trips": 558,
+      "total_km": 2205.3
+    },
+    {
+      "seed": 43,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + 7-day average",
+      "rbc_fill_rate": 0.9997,
+      "plt_fill_rate": 0.8631,
+      "rbc_wastage_rate": 0.0745,
+      "plt_wastage_rate": 0.0284,
+      "rbc_unmet": 6,
+      "plt_unmet": 1777,
+      "rbc_expired": 1879,
+      "plt_expired": 329,
+      "planned_trips": 773,
+      "emergency_trips": 110,
+      "total_km": 4608.0
+    },
+    {
+      "seed": 43,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + ML forecast",
+      "rbc_fill_rate": 0.9997,
+      "plt_fill_rate": 0.864,
+      "rbc_wastage_rate": 0.0764,
+      "plt_wastage_rate": 0.0278,
+      "rbc_unmet": 7,
+      "plt_unmet": 1765,
+      "rbc_expired": 1927,
+      "plt_expired": 323,
+      "planned_trips": 753,
+      "emergency_trips": 145,
+      "total_km": 4966.6
+    },
+    {
+      "seed": 43,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + perfect forecast (bound)",
+      "rbc_fill_rate": 0.9997,
+      "plt_fill_rate": 0.8747,
+      "rbc_wastage_rate": 0.0775,
+      "plt_wastage_rate": 0.0152,
+      "rbc_unmet": 7,
+      "plt_unmet": 1626,
+      "rbc_expired": 1954,
+      "plt_expired": 176,
+      "planned_trips": 782,
+      "emergency_trips": 81,
+      "total_km": 4757.2
+    },
+    {
+      "seed": 43,
+      "window": "2025 full year",
+      "variant": "Isolated banks",
+      "rbc_fill_rate": 0.9044,
+      "plt_fill_rate": 0.8408,
+      "rbc_wastage_rate": 0.1409,
+      "plt_wastage_rate": 0.2421,
+      "rbc_unmet": 6688,
+      "plt_unmet": 3080,
+      "rbc_expired": 10539,
+      "plt_expired": 5190,
+      "planned_trips": 0,
+      "emergency_trips": 0,
+      "total_km": 0.0
+    },
+    {
+      "seed": 43,
+      "window": "2025 full year",
+      "variant": "Phone-around (today)",
+      "rbc_fill_rate": 0.9424,
+      "plt_fill_rate": 0.9383,
+      "rbc_wastage_rate": 0.1083,
+      "plt_wastage_rate": 0.154,
+      "rbc_unmet": 4028,
+      "plt_unmet": 1193,
+      "rbc_expired": 8100,
+      "plt_expired": 3302,
+      "planned_trips": 0,
+      "emergency_trips": 1973,
+      "total_km": 7963.9
+    },
+    {
+      "seed": 43,
+      "window": "2025 full year",
+      "variant": "RaktSetu + 7-day average",
+      "rbc_fill_rate": 0.9994,
+      "plt_fill_rate": 0.9578,
+      "rbc_wastage_rate": 0.0469,
+      "plt_wastage_rate": 0.136,
+      "rbc_unmet": 44,
+      "plt_unmet": 817,
+      "rbc_expired": 3506,
+      "plt_expired": 2915,
+      "planned_trips": 2890,
+      "emergency_trips": 267,
+      "total_km": 17888.0
+    },
+    {
+      "seed": 43,
+      "window": "2025 full year",
+      "variant": "RaktSetu + ML forecast",
+      "rbc_fill_rate": 0.9994,
+      "plt_fill_rate": 0.9601,
+      "rbc_wastage_rate": 0.0475,
+      "plt_wastage_rate": 0.1338,
+      "rbc_unmet": 45,
+      "plt_unmet": 772,
+      "rbc_expired": 3550,
+      "plt_expired": 2867,
+      "planned_trips": 2875,
+      "emergency_trips": 338,
+      "total_km": 18918.9
+    },
+    {
+      "seed": 43,
+      "window": "2025 full year",
+      "variant": "RaktSetu + perfect forecast (bound)",
+      "rbc_fill_rate": 0.9993,
+      "plt_fill_rate": 0.978,
+      "rbc_wastage_rate": 0.0472,
+      "plt_wastage_rate": 0.1179,
+      "rbc_unmet": 46,
+      "plt_unmet": 426,
+      "rbc_expired": 3528,
+      "plt_expired": 2527,
+      "planned_trips": 2911,
+      "emergency_trips": 154,
+      "total_km": 18125.3
+    },
+    {
+      "seed": 44,
+      "window": "2024 dengue season",
+      "variant": "Isolated banks",
+      "rbc_fill_rate": 0.938,
+      "plt_fill_rate": 0.7804,
+      "rbc_wastage_rate": 0.0901,
+      "plt_wastage_rate": 0.1338,
+      "rbc_unmet": 1351,
+      "plt_unmet": 2771,
+      "rbc_expired": 2234,
+      "plt_expired": 1529,
+      "planned_trips": 0,
+      "emergency_trips": 0,
+      "total_km": 0.0
+    },
+    {
+      "seed": 44,
+      "window": "2024 dengue season",
+      "variant": "Phone-around (today)",
+      "rbc_fill_rate": 0.9669,
+      "plt_fill_rate": 0.8543,
+      "rbc_wastage_rate": 0.0749,
+      "plt_wastage_rate": 0.0517,
+      "rbc_unmet": 721,
+      "plt_unmet": 1838,
+      "rbc_expired": 1857,
+      "plt_expired": 591,
+      "planned_trips": 0,
+      "emergency_trips": 536,
+      "total_km": 2208.3
+    },
+    {
+      "seed": 44,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + 7-day average",
+      "rbc_fill_rate": 0.9974,
+      "plt_fill_rate": 0.8726,
+      "rbc_wastage_rate": 0.0251,
+      "plt_wastage_rate": 0.0314,
+      "rbc_unmet": 56,
+      "plt_unmet": 1607,
+      "rbc_expired": 623,
+      "plt_expired": 359,
+      "planned_trips": 801,
+      "emergency_trips": 119,
+      "total_km": 4950.2
+    },
+    {
+      "seed": 44,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + ML forecast",
+      "rbc_fill_rate": 0.9973,
+      "plt_fill_rate": 0.8733,
+      "rbc_wastage_rate": 0.0263,
+      "plt_wastage_rate": 0.0306,
+      "rbc_unmet": 58,
+      "plt_unmet": 1599,
+      "rbc_expired": 651,
+      "plt_expired": 350,
+      "planned_trips": 781,
+      "emergency_trips": 160,
+      "total_km": 4983.0
+    },
+    {
+      "seed": 44,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + perfect forecast (bound)",
+      "rbc_fill_rate": 0.9974,
+      "plt_fill_rate": 0.8844,
+      "rbc_wastage_rate": 0.0271,
+      "plt_wastage_rate": 0.0178,
+      "rbc_unmet": 56,
+      "plt_unmet": 1459,
+      "rbc_expired": 672,
+      "plt_expired": 203,
+      "planned_trips": 799,
+      "emergency_trips": 103,
+      "total_km": 4845.1
+    },
+    {
+      "seed": 44,
+      "window": "2025 full year",
+      "variant": "Isolated banks",
+      "rbc_fill_rate": 0.899,
+      "plt_fill_rate": 0.8454,
+      "rbc_wastage_rate": 0.1463,
+      "plt_wastage_rate": 0.2212,
+      "rbc_unmet": 7062,
+      "plt_unmet": 3050,
+      "rbc_expired": 10875,
+      "plt_expired": 4726,
+      "planned_trips": 0,
+      "emergency_trips": 0,
+      "total_km": 0.0
+    },
+    {
+      "seed": 44,
+      "window": "2025 full year",
+      "variant": "Phone-around (today)",
+      "rbc_fill_rate": 0.9351,
+      "plt_fill_rate": 0.9339,
+      "rbc_wastage_rate": 0.114,
+      "plt_wastage_rate": 0.1395,
+      "rbc_unmet": 4537,
+      "plt_unmet": 1304,
+      "rbc_expired": 8474,
+      "plt_expired": 2981,
+      "planned_trips": 0,
+      "emergency_trips": 1924,
+      "total_km": 7987.0
+    },
+    {
+      "seed": 44,
+      "window": "2025 full year",
+      "variant": "RaktSetu + 7-day average",
+      "rbc_fill_rate": 0.9951,
+      "plt_fill_rate": 0.9515,
+      "rbc_wastage_rate": 0.0502,
+      "plt_wastage_rate": 0.1239,
+      "rbc_unmet": 341,
+      "plt_unmet": 957,
+      "rbc_expired": 3731,
+      "plt_expired": 2647,
+      "planned_trips": 2839,
+      "emergency_trips": 500,
+      "total_km": 18851.0
+    },
+    {
+      "seed": 44,
+      "window": "2025 full year",
+      "variant": "RaktSetu + ML forecast",
+      "rbc_fill_rate": 0.995,
+      "plt_fill_rate": 0.9548,
+      "rbc_wastage_rate": 0.0512,
+      "plt_wastage_rate": 0.1208,
+      "rbc_unmet": 347,
+      "plt_unmet": 892,
+      "rbc_expired": 3807,
+      "plt_expired": 2580,
+      "planned_trips": 2846,
+      "emergency_trips": 556,
+      "total_km": 19573.7
+    },
+    {
+      "seed": 44,
+      "window": "2025 full year",
+      "variant": "RaktSetu + perfect forecast (bound)",
+      "rbc_fill_rate": 0.9953,
+      "plt_fill_rate": 0.9702,
+      "rbc_wastage_rate": 0.0511,
+      "plt_wastage_rate": 0.1065,
+      "rbc_unmet": 332,
+      "plt_unmet": 588,
+      "rbc_expired": 3795,
+      "plt_expired": 2276,
+      "planned_trips": 2907,
+      "emergency_trips": 357,
+      "total_km": 19206.0
+    },
+    {
+      "seed": 45,
+      "window": "2024 dengue season",
+      "variant": "Isolated banks",
+      "rbc_fill_rate": 0.932,
+      "plt_fill_rate": 0.7716,
+      "rbc_wastage_rate": 0.1161,
+      "plt_wastage_rate": 0.1404,
+      "rbc_unmet": 1488,
+      "plt_unmet": 2955,
+      "rbc_expired": 2883,
+      "plt_expired": 1631,
+      "planned_trips": 0,
+      "emergency_trips": 0,
+      "total_km": 0.0
+    },
+    {
+      "seed": 45,
+      "window": "2024 dengue season",
+      "variant": "Phone-around (today)",
+      "rbc_fill_rate": 0.9676,
+      "plt_fill_rate": 0.843,
+      "rbc_wastage_rate": 0.0944,
+      "plt_wastage_rate": 0.0598,
+      "rbc_unmet": 708,
+      "plt_unmet": 2031,
+      "rbc_expired": 2345,
+      "plt_expired": 695,
+      "planned_trips": 0,
+      "emergency_trips": 583,
+      "total_km": 2337.6
+    },
+    {
+      "seed": 45,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + 7-day average",
+      "rbc_fill_rate": 1.0,
+      "plt_fill_rate": 0.8686,
+      "rbc_wastage_rate": 0.0353,
+      "plt_wastage_rate": 0.0318,
+      "rbc_unmet": 1,
+      "plt_unmet": 1700,
+      "rbc_expired": 876,
+      "plt_expired": 370,
+      "planned_trips": 810,
+      "emergency_trips": 77,
+      "total_km": 4709.0
+    },
+    {
+      "seed": 45,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + ML forecast",
+      "rbc_fill_rate": 1.0,
+      "plt_fill_rate": 0.8717,
+      "rbc_wastage_rate": 0.0345,
+      "plt_wastage_rate": 0.0273,
+      "rbc_unmet": 0,
+      "plt_unmet": 1660,
+      "rbc_expired": 857,
+      "plt_expired": 317,
+      "planned_trips": 792,
+      "emergency_trips": 104,
+      "total_km": 4811.6
+    },
+    {
+      "seed": 45,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + perfect forecast (bound)",
+      "rbc_fill_rate": 1.0,
+      "plt_fill_rate": 0.884,
+      "rbc_wastage_rate": 0.0366,
+      "plt_wastage_rate": 0.014,
+      "rbc_unmet": 1,
+      "plt_unmet": 1501,
+      "rbc_expired": 908,
+      "plt_expired": 163,
+      "planned_trips": 829,
+      "emergency_trips": 56,
+      "total_km": 4895.8
+    },
+    {
+      "seed": 45,
+      "window": "2025 full year",
+      "variant": "Isolated banks",
+      "rbc_fill_rate": 0.9012,
+      "plt_fill_rate": 0.8392,
+      "rbc_wastage_rate": 0.1539,
+      "plt_wastage_rate": 0.2252,
+      "rbc_unmet": 6854,
+      "plt_unmet": 3157,
+      "rbc_expired": 11370,
+      "plt_expired": 4787,
+      "planned_trips": 0,
+      "emergency_trips": 0,
+      "total_km": 0.0
+    },
+    {
+      "seed": 45,
+      "window": "2025 full year",
+      "variant": "Phone-around (today)",
+      "rbc_fill_rate": 0.9419,
+      "plt_fill_rate": 0.9303,
+      "rbc_wastage_rate": 0.117,
+      "plt_wastage_rate": 0.1407,
+      "rbc_unmet": 4028,
+      "plt_unmet": 1369,
+      "rbc_expired": 8645,
+      "plt_expired": 2991,
+      "planned_trips": 0,
+      "emergency_trips": 1981,
+      "total_km": 8419.1
+    },
+    {
+      "seed": 45,
+      "window": "2025 full year",
+      "variant": "RaktSetu + 7-day average",
+      "rbc_fill_rate": 0.9996,
+      "plt_fill_rate": 0.9476,
+      "rbc_wastage_rate": 0.056,
+      "plt_wastage_rate": 0.1257,
+      "rbc_unmet": 26,
+      "plt_unmet": 1029,
+      "rbc_expired": 4134,
+      "plt_expired": 2672,
+      "planned_trips": 2882,
+      "emergency_trips": 281,
+      "total_km": 18583.9
+    },
+    {
+      "seed": 45,
+      "window": "2025 full year",
+      "variant": "RaktSetu + ML forecast",
+      "rbc_fill_rate": 0.9996,
+      "plt_fill_rate": 0.9506,
+      "rbc_wastage_rate": 0.0562,
+      "plt_wastage_rate": 0.1227,
+      "rbc_unmet": 25,
+      "plt_unmet": 971,
+      "rbc_expired": 4155,
+      "plt_expired": 2609,
+      "planned_trips": 2875,
+      "emergency_trips": 322,
+      "total_km": 19230.2
+    },
+    {
+      "seed": 45,
+      "window": "2025 full year",
+      "variant": "RaktSetu + perfect forecast (bound)",
+      "rbc_fill_rate": 0.9996,
+      "plt_fill_rate": 0.9712,
+      "rbc_wastage_rate": 0.0561,
+      "plt_wastage_rate": 0.1034,
+      "rbc_unmet": 28,
+      "plt_unmet": 566,
+      "rbc_expired": 4147,
+      "plt_expired": 2198,
+      "planned_trips": 2909,
+      "emergency_trips": 144,
+      "total_km": 18745.2
+    },
+    {
+      "seed": 46,
+      "window": "2024 dengue season",
+      "variant": "Isolated banks",
+      "rbc_fill_rate": 0.9322,
+      "plt_fill_rate": 0.7933,
+      "rbc_wastage_rate": 0.1379,
+      "plt_wastage_rate": 0.1403,
+      "rbc_unmet": 1475,
+      "plt_unmet": 2616,
+      "rbc_expired": 3424,
+      "plt_expired": 1631,
+      "planned_trips": 0,
+      "emergency_trips": 0,
+      "total_km": 0.0
+    },
+    {
+      "seed": 46,
+      "window": "2024 dengue season",
+      "variant": "Phone-around (today)",
+      "rbc_fill_rate": 0.9654,
+      "plt_fill_rate": 0.872,
+      "rbc_wastage_rate": 0.1099,
+      "plt_wastage_rate": 0.0528,
+      "rbc_unmet": 753,
+      "plt_unmet": 1620,
+      "rbc_expired": 2728,
+      "plt_expired": 614,
+      "planned_trips": 0,
+      "emergency_trips": 614,
+      "total_km": 2565.8
+    },
+    {
+      "seed": 46,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + 7-day average",
+      "rbc_fill_rate": 0.9987,
+      "plt_fill_rate": 0.8894,
+      "rbc_wastage_rate": 0.0472,
+      "plt_wastage_rate": 0.0345,
+      "rbc_unmet": 28,
+      "plt_unmet": 1399,
+      "rbc_expired": 1173,
+      "plt_expired": 401,
+      "planned_trips": 807,
+      "emergency_trips": 122,
+      "total_km": 5336.7
+    },
+    {
+      "seed": 46,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + ML forecast",
+      "rbc_fill_rate": 0.9986,
+      "plt_fill_rate": 0.8926,
+      "rbc_wastage_rate": 0.0495,
+      "plt_wastage_rate": 0.0312,
+      "rbc_unmet": 30,
+      "plt_unmet": 1359,
+      "rbc_expired": 1229,
+      "plt_expired": 362,
+      "planned_trips": 793,
+      "emergency_trips": 140,
+      "total_km": 5435.9
+    },
+    {
+      "seed": 46,
+      "window": "2024 dengue season",
+      "variant": "RaktSetu + perfect forecast (bound)",
+      "rbc_fill_rate": 0.9988,
+      "plt_fill_rate": 0.9082,
+      "rbc_wastage_rate": 0.0506,
+      "plt_wastage_rate": 0.014,
+      "rbc_unmet": 27,
+      "plt_unmet": 1162,
+      "rbc_expired": 1256,
+      "plt_expired": 163,
+      "planned_trips": 826,
+      "emergency_trips": 93,
+      "total_km": 5345.1
+    },
+    {
+      "seed": 46,
+      "window": "2025 full year",
+      "variant": "Isolated banks",
+      "rbc_fill_rate": 0.9004,
+      "plt_fill_rate": 0.8408,
+      "rbc_wastage_rate": 0.1554,
+      "plt_wastage_rate": 0.243,
+      "rbc_unmet": 6967,
+      "plt_unmet": 3076,
+      "rbc_expired": 11886,
+      "plt_expired": 5209,
+      "planned_trips": 0,
+      "emergency_trips": 0,
+      "total_km": 0.0
+    },
+    {
+      "seed": 46,
+      "window": "2025 full year",
+      "variant": "Phone-around (today)",
+      "rbc_fill_rate": 0.935,
+      "plt_fill_rate": 0.9349,
+      "rbc_wastage_rate": 0.126,
+      "plt_wastage_rate": 0.1581,
+      "rbc_unmet": 4547,
+      "plt_unmet": 1257,
+      "rbc_expired": 9643,
+      "plt_expired": 3390,
+      "planned_trips": 0,
+      "emergency_trips": 1962,
+      "total_km": 7940.5
+    },
+    {
+      "seed": 46,
+      "window": "2025 full year",
+      "variant": "RaktSetu + 7-day average",
+      "rbc_fill_rate": 0.998,
+      "plt_fill_rate": 0.9525,
+      "rbc_wastage_rate": 0.0597,
+      "plt_wastage_rate": 0.1414,
+      "rbc_unmet": 140,
+      "plt_unmet": 918,
+      "rbc_expired": 4570,
+      "plt_expired": 3032,
+      "planned_trips": 2893,
+      "emergency_trips": 371,
+      "total_km": 19414.9
+    },
+    {
+      "seed": 46,
+      "window": "2025 full year",
+      "variant": "RaktSetu + ML forecast",
+      "rbc_fill_rate": 0.9979,
+      "plt_fill_rate": 0.9551,
+      "rbc_wastage_rate": 0.0602,
+      "plt_wastage_rate": 0.1388,
+      "rbc_unmet": 144,
+      "plt_unmet": 867,
+      "rbc_expired": 4603,
+      "plt_expired": 2976,
+      "planned_trips": 2881,
+      "emergency_trips": 439,
+      "total_km": 20479.7
+    },
+    {
+      "seed": 46,
+      "window": "2025 full year",
+      "variant": "RaktSetu + perfect forecast (bound)",
+      "rbc_fill_rate": 0.998,
+      "plt_fill_rate": 0.9716,
+      "rbc_wastage_rate": 0.0606,
+      "plt_wastage_rate": 0.1236,
+      "rbc_unmet": 143,
+      "plt_unmet": 549,
+      "rbc_expired": 4640,
+      "plt_expired": 2649,
+      "planned_trips": 2912,
+      "emergency_trips": 287,
+      "total_km": 19893.4
+    }
+  ],
+  "policy_summary": {
+    "2024 dengue season|Isolated banks": {
+      "rbc_fill_rate": {
+        "mean": 0.9397,
+        "std": 0.0093
+      },
+      "plt_fill_rate": {
+        "mean": 0.7733,
+        "std": 0.0144
+      },
+      "rbc_wastage_rate": {
+        "mean": 0.1242,
+        "std": 0.0234
+      },
+      "plt_wastage_rate": {
+        "mean": 0.1411,
+        "std": 0.0053
+      },
+      "rbc_unmet": {
+        "mean": 1309.4,
+        "std": 214.0171
+      },
+      "plt_unmet": {
+        "mean": 2908.6,
+        "std": 218.7768
+      },
+      "rbc_expired": {
+        "mean": 3089.2,
+        "std": 600.2155
+      },
+      "plt_expired": {
+        "mean": 1629.2,
+        "std": 68.6527
+      },
+      "planned_trips": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "emergency_trips": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "total_km": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "2024 dengue season|Phone-around (today)": {
+      "rbc_fill_rate": {
+        "mean": 0.9691,
+        "std": 0.0054
+      },
+      "plt_fill_rate": {
+        "mean": 0.8494,
+        "std": 0.0153
+      },
+      "rbc_wastage_rate": {
+        "mean": 0.1029,
+        "std": 0.0203
+      },
+      "plt_wastage_rate": {
+        "mean": 0.0557,
+        "std": 0.0059
+      },
+      "rbc_unmet": {
+        "mean": 669.8,
+        "std": 120.8416
+      },
+      "plt_unmet": {
+        "mean": 1932.6,
+        "std": 217.6966
+      },
+      "rbc_expired": {
+        "mean": 2559.0,
+        "std": 522.462
+      },
+      "plt_expired": {
+        "mean": 644.0,
+        "std": 72.3429
+      },
+      "planned_trips": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "emergency_trips": {
+        "mean": 575.8,
+        "std": 29.8362
+      },
+      "total_km": {
+        "mean": 2371.78,
+        "std": 174.7814
+      }
+    },
+    "2024 dengue season|RaktSetu + 7-day average": {
+      "rbc_fill_rate": {
+        "mean": 0.998,
+        "std": 0.0024
+      },
+      "plt_fill_rate": {
+        "mean": 0.8719,
+        "std": 0.0104
+      },
+      "rbc_wastage_rate": {
+        "mean": 0.0468,
+        "std": 0.0187
+      },
+      "plt_wastage_rate": {
+        "mean": 0.0311,
+        "std": 0.0023
+      },
+      "rbc_unmet": {
+        "mean": 43.4,
+        "std": 51.0274
+      },
+      "plt_unmet": {
+        "mean": 1644.2,
+        "std": 150.8764
+      },
+      "rbc_expired": {
+        "mean": 1165.6,
+        "std": 474.2592
+      },
+      "plt_expired": {
+        "mean": 359.6,
+        "std": 28.2099
+      },
+      "planned_trips": {
+        "mean": 782.4,
+        "std": 37.3202
+      },
+      "emergency_trips": {
+        "mean": 123.4,
+        "std": 40.7958
+      },
+      "total_km": {
+        "mean": 4853.12,
+        "std": 300.3207
+      }
+    },
+    "2024 dengue season|RaktSetu + ML forecast": {
+      "rbc_fill_rate": {
+        "mean": 0.9979,
+        "std": 0.0024
+      },
+      "plt_fill_rate": {
+        "mean": 0.8738,
+        "std": 0.0111
+      },
+      "rbc_wastage_rate": {
+        "mean": 0.0484,
+        "std": 0.0195
+      },
+      "plt_wastage_rate": {
+        "mean": 0.0289,
+        "std": 0.0019
+      },
+      "rbc_unmet": {
+        "mean": 44.6,
+        "std": 51.844
+      },
+      "plt_unmet": {
+        "mean": 1619.2,
+        "std": 157.9816
+      },
+      "rbc_expired": {
+        "mean": 1204.8,
+        "std": 493.4331
+      },
+      "plt_expired": {
+        "mean": 333.4,
+        "std": 21.2673
+      },
+      "planned_trips": {
+        "mean": 769.2,
+        "std": 28.5867
+      },
+      "emergency_trips": {
+        "mean": 153.2,
+        "std": 41.1667
+      },
+      "total_km": {
+        "mean": 5021.82,
+        "std": 240.9727
+      }
+    },
+    "2024 dengue season|RaktSetu + perfect forecast (bound)": {
+      "rbc_fill_rate": {
+        "mean": 0.9981,
+        "std": 0.0023
+      },
+      "plt_fill_rate": {
+        "mean": 0.8859,
+        "std": 0.0131
+      },
+      "rbc_wastage_rate": {
+        "mean": 0.0495,
+        "std": 0.0193
+      },
+      "plt_wastage_rate": {
+        "mean": 0.0154,
+        "std": 0.0016
+      },
+      "rbc_unmet": {
+        "mean": 42.4,
+        "std": 48.906
+      },
+      "plt_unmet": {
+        "mean": 1464.8,
+        "std": 181.2338
+      },
+      "rbc_expired": {
+        "mean": 1232.2,
+        "std": 489.8359
+      },
+      "plt_expired": {
+        "mean": 177.4,
+        "std": 16.5318
+      },
+      "planned_trips": {
+        "mean": 798.2,
+        "std": 31.0274
+      },
+      "emergency_trips": {
+        "mean": 103.0,
+        "std": 47.5237
+      },
+      "total_km": {
+        "mean": 4940.92,
+        "std": 231.6545
+      }
+    },
+    "2025 full year|Isolated banks": {
+      "rbc_fill_rate": {
+        "mean": 0.9017,
+        "std": 0.0023
+      },
+      "plt_fill_rate": {
+        "mean": 0.8387,
+        "std": 0.0067
+      },
+      "rbc_wastage_rate": {
+        "mean": 0.149,
+        "std": 0.0059
+      },
+      "plt_wastage_rate": {
+        "mean": 0.2284,
+        "std": 0.014
+      },
+      "rbc_unmet": {
+        "mean": 6847.8,
+        "std": 171.7504
+      },
+      "plt_unmet": {
+        "mean": 3160.8,
+        "std": 161.6499
+      },
+      "rbc_expired": {
+        "mean": 11152.0,
+        "std": 510.5443
+      },
+      "plt_expired": {
+        "mean": 4863.0,
+        "std": 340.1434
+      },
+      "planned_trips": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "emergency_trips": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "total_km": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "2025 full year|Phone-around (today)": {
+      "rbc_fill_rate": {
+        "mean": 0.939,
+        "std": 0.0037
+      },
+      "plt_fill_rate": {
+        "mean": 0.9316,
+        "std": 0.0069
+      },
+      "rbc_wastage_rate": {
+        "mean": 0.1164,
+        "std": 0.0064
+      },
+      "plt_wastage_rate": {
+        "mean": 0.1429,
+        "std": 0.0141
+      },
+      "rbc_unmet": {
+        "mean": 4249.8,
+        "std": 268.8061
+      },
+      "plt_unmet": {
+        "mean": 1341.8,
+        "std": 150.9427
+      },
+      "rbc_expired": {
+        "mean": 8719.4,
+        "std": 570.6779
+      },
+      "plt_expired": {
+        "mean": 3044.2,
+        "std": 327.9584
+      },
+      "planned_trips": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "emergency_trips": {
+        "mean": 1972.2,
+        "std": 34.9528
+      },
+      "total_km": {
+        "mean": 8071.2,
+        "std": 198.3559
+      }
+    },
+    "2025 full year|RaktSetu + 7-day average": {
+      "rbc_fill_rate": {
+        "mean": 0.9976,
+        "std": 0.0021
+      },
+      "plt_fill_rate": {
+        "mean": 0.9495,
+        "std": 0.0073
+      },
+      "rbc_wastage_rate": {
+        "mean": 0.054,
+        "std": 0.0053
+      },
+      "plt_wastage_rate": {
+        "mean": 0.1265,
+        "std": 0.0138
+      },
+      "rbc_unmet": {
+        "mean": 167.8,
+        "std": 141.9972
+      },
+      "plt_unmet": {
+        "mean": 990.6,
+        "std": 155.1493
+      },
+      "rbc_expired": {
+        "mean": 4042.8,
+        "std": 425.6239
+      },
+      "plt_expired": {
+        "mean": 2694.4,
+        "std": 317.774
+      },
+      "planned_trips": {
+        "mean": 2855.0,
+        "std": 51.7446
+      },
+      "emergency_trips": {
+        "mean": 382.4,
+        "std": 111.5697
+      },
+      "total_km": {
+        "mean": 18523.14,
+        "std": 656.9165
+      }
+    },
+    "2025 full year|RaktSetu + ML forecast": {
+      "rbc_fill_rate": {
+        "mean": 0.9975,
+        "std": 0.0021
+      },
+      "plt_fill_rate": {
+        "mean": 0.9523,
+        "std": 0.0071
+      },
+      "rbc_wastage_rate": {
+        "mean": 0.0547,
+        "std": 0.0052
+      },
+      "plt_wastage_rate": {
+        "mean": 0.1238,
+        "std": 0.0139
+      },
+      "rbc_unmet": {
+        "mean": 171.4,
+        "std": 145.3626
+      },
+      "plt_unmet": {
+        "mean": 935.2,
+        "std": 151.2108
+      },
+      "rbc_expired": {
+        "mean": 4094.8,
+        "std": 421.7016
+      },
+      "plt_expired": {
+        "mean": 2636.8,
+        "std": 319.0136
+      },
+      "planned_trips": {
+        "mean": 2846.4,
+        "std": 52.8848
+      },
+      "emergency_trips": {
+        "mean": 440.4,
+        "std": 110.9428
+      },
+      "total_km": {
+        "mean": 19398.28,
+        "std": 676.3212
+      }
+    },
+    "2025 full year|RaktSetu + perfect forecast (bound)": {
+      "rbc_fill_rate": {
+        "mean": 0.9976,
+        "std": 0.002
+      },
+      "plt_fill_rate": {
+        "mean": 0.9707,
+        "std": 0.0055
+      },
+      "rbc_wastage_rate": {
+        "mean": 0.0546,
+        "std": 0.0054
+      },
+      "plt_wastage_rate": {
+        "mean": 0.1068,
+        "std": 0.0158
+      },
+      "rbc_unmet": {
+        "mean": 169.6,
+        "std": 140.6709
+      },
+      "plt_unmet": {
+        "mean": 575.4,
+        "std": 115.1686
+      },
+      "rbc_expired": {
+        "mean": 4092.8,
+        "std": 441.0994
+      },
+      "plt_expired": {
+        "mean": 2275.6,
+        "std": 356.552
+      },
+      "planned_trips": {
+        "mean": 2900.8,
+        "std": 20.1047
+      },
+      "emergency_trips": {
+        "mean": 262.4,
+        "std": 108.2834
+      },
+      "total_km": {
+        "mean": 18930.24,
+        "std": 661.0333
+      }
+    }
+  },
+  "sensitivity_runs": [
+    {
+      "param": "kappa",
+      "label": "Dengue platelet peak (x baseline - 1)",
+      "value": 1.5,
+      "seed": 42,
+      "reactive_rbc_fill_rate": 0.9652,
+      "reactive_plt_fill_rate": 0.9778,
+      "reactive_rbc_wastage_rate": 0.0884,
+      "reactive_plt_wastage_rate": 0.1624,
+      "reactive_rbc_unmet": 755,
+      "reactive_plt_unmet": 214,
+      "reactive_rbc_expired": 2117,
+      "reactive_plt_expired": 1808,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 519,
+      "reactive_total_km": 2170.0,
+      "raktsetu_rbc_fill_rate": 0.9931,
+      "raktsetu_plt_fill_rate": 0.9939,
+      "raktsetu_rbc_wastage_rate": 0.0455,
+      "raktsetu_plt_wastage_rate": 0.1471,
+      "raktsetu_rbc_unmet": 150,
+      "raktsetu_plt_unmet": 59,
+      "raktsetu_rbc_expired": 1089,
+      "raktsetu_plt_expired": 1638,
+      "raktsetu_planned_trips": 856,
+      "raktsetu_emergency_trips": 144,
+      "raktsetu_total_km": 5613.8
+    },
+    {
+      "param": "kappa",
+      "label": "Dengue platelet peak (x baseline - 1)",
+      "value": 1.5,
+      "seed": 43,
+      "reactive_rbc_fill_rate": 0.9713,
+      "reactive_plt_fill_rate": 0.9817,
+      "reactive_rbc_wastage_rate": 0.1162,
+      "reactive_plt_wastage_rate": 0.1749,
+      "reactive_rbc_unmet": 611,
+      "reactive_plt_unmet": 177,
+      "reactive_rbc_expired": 2882,
+      "reactive_plt_expired": 2015,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 510,
+      "reactive_total_km": 2022.1,
+      "raktsetu_rbc_fill_rate": 0.9996,
+      "raktsetu_plt_fill_rate": 0.9962,
+      "raktsetu_rbc_wastage_rate": 0.0614,
+      "raktsetu_plt_wastage_rate": 0.1642,
+      "raktsetu_rbc_unmet": 9,
+      "raktsetu_plt_unmet": 37,
+      "raktsetu_rbc_expired": 1522,
+      "raktsetu_plt_expired": 1891,
+      "raktsetu_planned_trips": 859,
+      "raktsetu_emergency_trips": 45,
+      "raktsetu_total_km": 5498.3
+    },
+    {
+      "param": "kappa",
+      "label": "Dengue platelet peak (x baseline - 1)",
+      "value": 1.5,
+      "seed": 44,
+      "reactive_rbc_fill_rate": 0.9748,
+      "reactive_plt_fill_rate": 0.983,
+      "reactive_rbc_wastage_rate": 0.1022,
+      "reactive_plt_wastage_rate": 0.1819,
+      "reactive_rbc_unmet": 548,
+      "reactive_plt_unmet": 166,
+      "reactive_rbc_expired": 2566,
+      "reactive_plt_expired": 2124,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 515,
+      "reactive_total_km": 2017.5,
+      "raktsetu_rbc_fill_rate": 0.9972,
+      "raktsetu_plt_fill_rate": 0.9926,
+      "raktsetu_rbc_wastage_rate": 0.0508,
+      "raktsetu_plt_wastage_rate": 0.173,
+      "raktsetu_rbc_unmet": 61,
+      "raktsetu_plt_unmet": 72,
+      "raktsetu_rbc_expired": 1276,
+      "raktsetu_plt_expired": 2021,
+      "raktsetu_planned_trips": 846,
+      "raktsetu_emergency_trips": 125,
+      "raktsetu_total_km": 5661.9
+    },
+    {
+      "param": "kappa",
+      "label": "Dengue platelet peak (x baseline - 1)",
+      "value": 2.5,
+      "seed": 42,
+      "reactive_rbc_fill_rate": 0.9672,
+      "reactive_plt_fill_rate": 0.8474,
+      "reactive_rbc_wastage_rate": 0.105,
+      "reactive_plt_wastage_rate": 0.0503,
+      "reactive_rbc_unmet": 711,
+      "reactive_plt_unmet": 1974,
+      "reactive_rbc_expired": 2582,
+      "reactive_plt_expired": 576,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 588,
+      "reactive_total_km": 2541.9,
+      "raktsetu_rbc_fill_rate": 0.9942,
+      "raktsetu_plt_fill_rate": 0.869,
+      "raktsetu_rbc_wastage_rate": 0.056,
+      "raktsetu_plt_wastage_rate": 0.026,
+      "raktsetu_rbc_unmet": 126,
+      "raktsetu_plt_unmet": 1694,
+      "raktsetu_rbc_expired": 1377,
+      "raktsetu_plt_expired": 298,
+      "raktsetu_planned_trips": 741,
+      "raktsetu_emergency_trips": 212,
+      "raktsetu_total_km": 4825.1
+    },
+    {
+      "param": "kappa",
+      "label": "Dengue platelet peak (x baseline - 1)",
+      "value": 2.5,
+      "seed": 43,
+      "reactive_rbc_fill_rate": 0.9786,
+      "reactive_plt_fill_rate": 0.8305,
+      "reactive_rbc_wastage_rate": 0.1302,
+      "reactive_plt_wastage_rate": 0.0641,
+      "reactive_rbc_unmet": 456,
+      "reactive_plt_unmet": 2200,
+      "reactive_rbc_expired": 3283,
+      "reactive_plt_expired": 744,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 558,
+      "reactive_total_km": 2205.3,
+      "raktsetu_rbc_fill_rate": 0.9997,
+      "raktsetu_plt_fill_rate": 0.8632,
+      "raktsetu_rbc_wastage_rate": 0.0762,
+      "raktsetu_plt_wastage_rate": 0.0289,
+      "raktsetu_rbc_unmet": 6,
+      "raktsetu_plt_unmet": 1776,
+      "raktsetu_rbc_expired": 1920,
+      "raktsetu_plt_expired": 335,
+      "raktsetu_planned_trips": 760,
+      "raktsetu_emergency_trips": 142,
+      "raktsetu_total_km": 4859.8
+    },
+    {
+      "param": "kappa",
+      "label": "Dengue platelet peak (x baseline - 1)",
+      "value": 2.5,
+      "seed": 44,
+      "reactive_rbc_fill_rate": 0.9669,
+      "reactive_plt_fill_rate": 0.8543,
+      "reactive_rbc_wastage_rate": 0.0749,
+      "reactive_plt_wastage_rate": 0.0517,
+      "reactive_rbc_unmet": 721,
+      "reactive_plt_unmet": 1838,
+      "reactive_rbc_expired": 1857,
+      "reactive_plt_expired": 591,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 536,
+      "reactive_total_km": 2208.3,
+      "raktsetu_rbc_fill_rate": 0.9975,
+      "raktsetu_plt_fill_rate": 0.8717,
+      "raktsetu_rbc_wastage_rate": 0.0276,
+      "raktsetu_plt_wastage_rate": 0.0324,
+      "raktsetu_rbc_unmet": 55,
+      "raktsetu_plt_unmet": 1619,
+      "raktsetu_rbc_expired": 685,
+      "raktsetu_plt_expired": 370,
+      "raktsetu_planned_trips": 784,
+      "raktsetu_emergency_trips": 160,
+      "raktsetu_total_km": 4922.1
+    },
+    {
+      "param": "kappa",
+      "label": "Dengue platelet peak (x baseline - 1)",
+      "value": 4.0,
+      "seed": 42,
+      "reactive_rbc_fill_rate": 0.9693,
+      "reactive_plt_fill_rate": 0.6507,
+      "reactive_rbc_wastage_rate": 0.14,
+      "reactive_plt_wastage_rate": 0.0228,
+      "reactive_rbc_unmet": 666,
+      "reactive_plt_unmet": 6216,
+      "reactive_rbc_expired": 3592,
+      "reactive_plt_expired": 271,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 539,
+      "reactive_total_km": 2244.3,
+      "raktsetu_rbc_fill_rate": 0.9965,
+      "raktsetu_plt_fill_rate": 0.6606,
+      "raktsetu_rbc_wastage_rate": 0.0842,
+      "raktsetu_plt_wastage_rate": 0.0085,
+      "raktsetu_rbc_unmet": 76,
+      "raktsetu_plt_unmet": 6039,
+      "raktsetu_rbc_expired": 2161,
+      "raktsetu_plt_expired": 101,
+      "raktsetu_planned_trips": 719,
+      "raktsetu_emergency_trips": 146,
+      "raktsetu_total_km": 4398.7
+    },
+    {
+      "param": "kappa",
+      "label": "Dengue platelet peak (x baseline - 1)",
+      "value": 4.0,
+      "seed": 43,
+      "reactive_rbc_fill_rate": 0.9661,
+      "reactive_plt_fill_rate": 0.6296,
+      "reactive_rbc_wastage_rate": 0.1098,
+      "reactive_plt_wastage_rate": 0.0324,
+      "reactive_rbc_unmet": 721,
+      "reactive_plt_unmet": 6543,
+      "reactive_rbc_expired": 2708,
+      "reactive_plt_expired": 372,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 473,
+      "reactive_total_km": 1983.5,
+      "raktsetu_rbc_fill_rate": 0.9999,
+      "raktsetu_plt_fill_rate": 0.6452,
+      "raktsetu_rbc_wastage_rate": 0.0483,
+      "raktsetu_plt_wastage_rate": 0.0066,
+      "raktsetu_rbc_unmet": 2,
+      "raktsetu_plt_unmet": 6268,
+      "raktsetu_rbc_expired": 1192,
+      "raktsetu_plt_expired": 76,
+      "raktsetu_planned_trips": 727,
+      "raktsetu_emergency_trips": 112,
+      "raktsetu_total_km": 4272.7
+    },
+    {
+      "param": "kappa",
+      "label": "Dengue platelet peak (x baseline - 1)",
+      "value": 4.0,
+      "seed": 44,
+      "reactive_rbc_fill_rate": 0.9704,
+      "reactive_plt_fill_rate": 0.6394,
+      "reactive_rbc_wastage_rate": 0.0766,
+      "reactive_plt_wastage_rate": 0.0237,
+      "reactive_rbc_unmet": 644,
+      "reactive_plt_unmet": 6349,
+      "reactive_rbc_expired": 1884,
+      "reactive_plt_expired": 274,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 506,
+      "reactive_total_km": 2221.8,
+      "raktsetu_rbc_fill_rate": 0.9962,
+      "raktsetu_plt_fill_rate": 0.6502,
+      "raktsetu_rbc_wastage_rate": 0.0263,
+      "raktsetu_plt_wastage_rate": 0.007,
+      "raktsetu_rbc_unmet": 82,
+      "raktsetu_plt_unmet": 6160,
+      "raktsetu_rbc_expired": 646,
+      "raktsetu_plt_expired": 81,
+      "raktsetu_planned_trips": 721,
+      "raktsetu_emergency_trips": 131,
+      "raktsetu_total_km": 4585.8
+    },
+    {
+      "param": "collection_ratio",
+      "label": "Collection / demand",
+      "value": 0.98,
+      "seed": 42,
+      "reactive_rbc_fill_rate": 0.909,
+      "reactive_plt_fill_rate": 0.7788,
+      "reactive_rbc_wastage_rate": 0.0823,
+      "reactive_plt_wastage_rate": 0.0478,
+      "reactive_rbc_unmet": 1974,
+      "reactive_plt_unmet": 2860,
+      "reactive_rbc_expired": 1830,
+      "reactive_plt_expired": 504,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 640,
+      "reactive_total_km": 2671.4,
+      "raktsetu_rbc_fill_rate": 0.9885,
+      "raktsetu_plt_fill_rate": 0.8,
+      "raktsetu_rbc_wastage_rate": 0.0005,
+      "raktsetu_plt_wastage_rate": 0.0241,
+      "raktsetu_rbc_unmet": 249,
+      "raktsetu_plt_unmet": 2586,
+      "raktsetu_rbc_expired": 11,
+      "raktsetu_plt_expired": 254,
+      "raktsetu_planned_trips": 812,
+      "raktsetu_emergency_trips": 240,
+      "raktsetu_total_km": 5904.4
+    },
+    {
+      "param": "collection_ratio",
+      "label": "Collection / demand",
+      "value": 0.98,
+      "seed": 43,
+      "reactive_rbc_fill_rate": 0.9279,
+      "reactive_plt_fill_rate": 0.7648,
+      "reactive_rbc_wastage_rate": 0.0974,
+      "reactive_plt_wastage_rate": 0.0531,
+      "reactive_rbc_unmet": 1534,
+      "reactive_plt_unmet": 3053,
+      "reactive_rbc_expired": 2238,
+      "reactive_plt_expired": 559,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 619,
+      "reactive_total_km": 2698.4,
+      "raktsetu_rbc_fill_rate": 0.9968,
+      "raktsetu_plt_fill_rate": 0.7957,
+      "raktsetu_rbc_wastage_rate": 0.0146,
+      "raktsetu_plt_wastage_rate": 0.015,
+      "raktsetu_rbc_unmet": 69,
+      "raktsetu_plt_unmet": 2651,
+      "raktsetu_rbc_expired": 336,
+      "raktsetu_plt_expired": 158,
+      "raktsetu_planned_trips": 846,
+      "raktsetu_emergency_trips": 186,
+      "raktsetu_total_km": 5976.0
+    },
+    {
+      "param": "collection_ratio",
+      "label": "Collection / demand",
+      "value": 0.98,
+      "seed": 44,
+      "reactive_rbc_fill_rate": 0.9137,
+      "reactive_plt_fill_rate": 0.7941,
+      "reactive_rbc_wastage_rate": 0.054,
+      "reactive_plt_wastage_rate": 0.0389,
+      "reactive_rbc_unmet": 1881,
+      "reactive_plt_unmet": 2598,
+      "reactive_rbc_expired": 1219,
+      "reactive_plt_expired": 407,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 563,
+      "reactive_total_km": 2269.0,
+      "raktsetu_rbc_fill_rate": 0.9738,
+      "raktsetu_plt_fill_rate": 0.8115,
+      "raktsetu_rbc_wastage_rate": 0.0005,
+      "raktsetu_plt_wastage_rate": 0.018,
+      "raktsetu_rbc_unmet": 571,
+      "raktsetu_plt_unmet": 2379,
+      "raktsetu_rbc_expired": 12,
+      "raktsetu_plt_expired": 188,
+      "raktsetu_planned_trips": 739,
+      "raktsetu_emergency_trips": 275,
+      "raktsetu_total_km": 5529.3
+    },
+    {
+      "param": "collection_ratio",
+      "label": "Collection / demand",
+      "value": 1.08,
+      "seed": 42,
+      "reactive_rbc_fill_rate": 0.9672,
+      "reactive_plt_fill_rate": 0.8474,
+      "reactive_rbc_wastage_rate": 0.105,
+      "reactive_plt_wastage_rate": 0.0503,
+      "reactive_rbc_unmet": 711,
+      "reactive_plt_unmet": 1974,
+      "reactive_rbc_expired": 2582,
+      "reactive_plt_expired": 576,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 588,
+      "reactive_total_km": 2541.9,
+      "raktsetu_rbc_fill_rate": 0.9941,
+      "raktsetu_plt_fill_rate": 0.8678,
+      "raktsetu_rbc_wastage_rate": 0.0549,
+      "raktsetu_plt_wastage_rate": 0.0277,
+      "raktsetu_rbc_unmet": 127,
+      "raktsetu_plt_unmet": 1709,
+      "raktsetu_rbc_expired": 1350,
+      "raktsetu_plt_expired": 317,
+      "raktsetu_planned_trips": 727,
+      "raktsetu_emergency_trips": 215,
+      "raktsetu_total_km": 5046.9
+    },
+    {
+      "param": "collection_ratio",
+      "label": "Collection / demand",
+      "value": 1.08,
+      "seed": 43,
+      "reactive_rbc_fill_rate": 0.9786,
+      "reactive_plt_fill_rate": 0.8305,
+      "reactive_rbc_wastage_rate": 0.1302,
+      "reactive_plt_wastage_rate": 0.0641,
+      "reactive_rbc_unmet": 456,
+      "reactive_plt_unmet": 2200,
+      "reactive_rbc_expired": 3283,
+      "reactive_plt_expired": 744,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 558,
+      "reactive_total_km": 2205.3,
+      "raktsetu_rbc_fill_rate": 0.9997,
+      "raktsetu_plt_fill_rate": 0.8683,
+      "raktsetu_rbc_wastage_rate": 0.0762,
+      "raktsetu_plt_wastage_rate": 0.0227,
+      "raktsetu_rbc_unmet": 6,
+      "raktsetu_plt_unmet": 1709,
+      "raktsetu_rbc_expired": 1922,
+      "raktsetu_plt_expired": 263,
+      "raktsetu_planned_trips": 745,
+      "raktsetu_emergency_trips": 135,
+      "raktsetu_total_km": 4805.1
+    },
+    {
+      "param": "collection_ratio",
+      "label": "Collection / demand",
+      "value": 1.08,
+      "seed": 44,
+      "reactive_rbc_fill_rate": 0.9669,
+      "reactive_plt_fill_rate": 0.8543,
+      "reactive_rbc_wastage_rate": 0.0749,
+      "reactive_plt_wastage_rate": 0.0517,
+      "reactive_rbc_unmet": 721,
+      "reactive_plt_unmet": 1838,
+      "reactive_rbc_expired": 1857,
+      "reactive_plt_expired": 591,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 536,
+      "reactive_total_km": 2208.3,
+      "raktsetu_rbc_fill_rate": 0.9972,
+      "raktsetu_plt_fill_rate": 0.8736,
+      "raktsetu_rbc_wastage_rate": 0.0272,
+      "raktsetu_plt_wastage_rate": 0.0304,
+      "raktsetu_rbc_unmet": 62,
+      "raktsetu_plt_unmet": 1595,
+      "raktsetu_rbc_expired": 674,
+      "raktsetu_plt_expired": 348,
+      "raktsetu_planned_trips": 785,
+      "raktsetu_emergency_trips": 147,
+      "raktsetu_total_km": 4902.2
+    },
+    {
+      "param": "collection_ratio",
+      "label": "Collection / demand",
+      "value": 1.18,
+      "seed": 42,
+      "reactive_rbc_fill_rate": 0.992,
+      "reactive_plt_fill_rate": 0.9236,
+      "reactive_rbc_wastage_rate": 0.1351,
+      "reactive_plt_wastage_rate": 0.0712,
+      "reactive_rbc_unmet": 174,
+      "reactive_plt_unmet": 988,
+      "reactive_rbc_expired": 3670,
+      "reactive_plt_expired": 910,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 460,
+      "reactive_total_km": 1743.5,
+      "raktsetu_rbc_fill_rate": 0.9967,
+      "raktsetu_plt_fill_rate": 0.9396,
+      "raktsetu_rbc_wastage_rate": 0.1104,
+      "raktsetu_plt_wastage_rate": 0.0569,
+      "raktsetu_rbc_unmet": 71,
+      "raktsetu_plt_unmet": 781,
+      "raktsetu_rbc_expired": 2999,
+      "raktsetu_plt_expired": 728,
+      "raktsetu_planned_trips": 712,
+      "raktsetu_emergency_trips": 135,
+      "raktsetu_total_km": 4372.6
+    },
+    {
+      "param": "collection_ratio",
+      "label": "Collection / demand",
+      "value": 1.18,
+      "seed": 43,
+      "reactive_rbc_fill_rate": 0.9971,
+      "reactive_plt_fill_rate": 0.8984,
+      "reactive_rbc_wastage_rate": 0.1627,
+      "reactive_plt_wastage_rate": 0.0833,
+      "reactive_rbc_unmet": 62,
+      "reactive_plt_unmet": 1319,
+      "reactive_rbc_expired": 4494,
+      "reactive_plt_expired": 1061,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 418,
+      "reactive_total_km": 1452.5,
+      "raktsetu_rbc_fill_rate": 0.9999,
+      "raktsetu_plt_fill_rate": 0.9298,
+      "raktsetu_rbc_wastage_rate": 0.1298,
+      "raktsetu_plt_wastage_rate": 0.0521,
+      "raktsetu_rbc_unmet": 3,
+      "raktsetu_plt_unmet": 911,
+      "raktsetu_rbc_expired": 3584,
+      "raktsetu_plt_expired": 664,
+      "raktsetu_planned_trips": 678,
+      "raktsetu_emergency_trips": 100,
+      "raktsetu_total_km": 3738.1
+    },
+    {
+      "param": "collection_ratio",
+      "label": "Collection / demand",
+      "value": 1.18,
+      "seed": 44,
+      "reactive_rbc_fill_rate": 0.991,
+      "reactive_plt_fill_rate": 0.9132,
+      "reactive_rbc_wastage_rate": 0.0959,
+      "reactive_plt_wastage_rate": 0.0629,
+      "reactive_rbc_unmet": 196,
+      "reactive_plt_unmet": 1095,
+      "reactive_rbc_expired": 2595,
+      "reactive_plt_expired": 776,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 488,
+      "reactive_total_km": 1884.9,
+      "raktsetu_rbc_fill_rate": 0.9984,
+      "raktsetu_plt_fill_rate": 0.9319,
+      "raktsetu_rbc_wastage_rate": 0.0686,
+      "raktsetu_plt_wastage_rate": 0.0415,
+      "raktsetu_rbc_unmet": 35,
+      "raktsetu_plt_unmet": 859,
+      "raktsetu_rbc_expired": 1856,
+      "raktsetu_plt_expired": 512,
+      "raktsetu_planned_trips": 689,
+      "raktsetu_emergency_trips": 135,
+      "raktsetu_total_km": 4193.2
+    },
+    {
+      "param": "vans",
+      "label": "Vans available",
+      "value": 1,
+      "seed": 42,
+      "reactive_rbc_fill_rate": 0.9672,
+      "reactive_plt_fill_rate": 0.8474,
+      "reactive_rbc_wastage_rate": 0.105,
+      "reactive_plt_wastage_rate": 0.0503,
+      "reactive_rbc_unmet": 711,
+      "reactive_plt_unmet": 1974,
+      "reactive_rbc_expired": 2582,
+      "reactive_plt_expired": 576,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 588,
+      "reactive_total_km": 2541.9,
+      "raktsetu_rbc_fill_rate": 0.9943,
+      "raktsetu_plt_fill_rate": 0.8651,
+      "raktsetu_rbc_wastage_rate": 0.0567,
+      "raktsetu_plt_wastage_rate": 0.03,
+      "raktsetu_rbc_unmet": 124,
+      "raktsetu_plt_unmet": 1745,
+      "raktsetu_rbc_expired": 1394,
+      "raktsetu_plt_expired": 343,
+      "raktsetu_planned_trips": 432,
+      "raktsetu_emergency_trips": 225,
+      "raktsetu_total_km": 3497.5
+    },
+    {
+      "param": "vans",
+      "label": "Vans available",
+      "value": 1,
+      "seed": 43,
+      "reactive_rbc_fill_rate": 0.9786,
+      "reactive_plt_fill_rate": 0.8305,
+      "reactive_rbc_wastage_rate": 0.1302,
+      "reactive_plt_wastage_rate": 0.0641,
+      "reactive_rbc_unmet": 456,
+      "reactive_plt_unmet": 2200,
+      "reactive_rbc_expired": 3283,
+      "reactive_plt_expired": 744,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 558,
+      "reactive_total_km": 2205.3,
+      "raktsetu_rbc_fill_rate": 0.9997,
+      "raktsetu_plt_fill_rate": 0.8671,
+      "raktsetu_rbc_wastage_rate": 0.0786,
+      "raktsetu_plt_wastage_rate": 0.0241,
+      "raktsetu_rbc_unmet": 7,
+      "raktsetu_plt_unmet": 1725,
+      "raktsetu_rbc_expired": 1981,
+      "raktsetu_plt_expired": 280,
+      "raktsetu_planned_trips": 432,
+      "raktsetu_emergency_trips": 150,
+      "raktsetu_total_km": 3255.6
+    },
+    {
+      "param": "vans",
+      "label": "Vans available",
+      "value": 1,
+      "seed": 44,
+      "reactive_rbc_fill_rate": 0.9669,
+      "reactive_plt_fill_rate": 0.8543,
+      "reactive_rbc_wastage_rate": 0.0749,
+      "reactive_plt_wastage_rate": 0.0517,
+      "reactive_rbc_unmet": 721,
+      "reactive_plt_unmet": 1838,
+      "reactive_rbc_expired": 1857,
+      "reactive_plt_expired": 591,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 536,
+      "reactive_total_km": 2208.3,
+      "raktsetu_rbc_fill_rate": 0.9972,
+      "raktsetu_plt_fill_rate": 0.8733,
+      "raktsetu_rbc_wastage_rate": 0.0274,
+      "raktsetu_plt_wastage_rate": 0.0305,
+      "raktsetu_rbc_unmet": 61,
+      "raktsetu_plt_unmet": 1599,
+      "raktsetu_rbc_expired": 678,
+      "raktsetu_plt_expired": 349,
+      "raktsetu_planned_trips": 432,
+      "raktsetu_emergency_trips": 161,
+      "raktsetu_total_km": 3176.8
+    },
+    {
+      "param": "vans",
+      "label": "Vans available",
+      "value": 2,
+      "seed": 42,
+      "reactive_rbc_fill_rate": 0.9672,
+      "reactive_plt_fill_rate": 0.8474,
+      "reactive_rbc_wastage_rate": 0.105,
+      "reactive_plt_wastage_rate": 0.0503,
+      "reactive_rbc_unmet": 711,
+      "reactive_plt_unmet": 1974,
+      "reactive_rbc_expired": 2582,
+      "reactive_plt_expired": 576,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 588,
+      "reactive_total_km": 2541.9,
+      "raktsetu_rbc_fill_rate": 0.9941,
+      "raktsetu_plt_fill_rate": 0.8677,
+      "raktsetu_rbc_wastage_rate": 0.0564,
+      "raktsetu_plt_wastage_rate": 0.0278,
+      "raktsetu_rbc_unmet": 128,
+      "raktsetu_plt_unmet": 1711,
+      "raktsetu_rbc_expired": 1388,
+      "raktsetu_plt_expired": 318,
+      "raktsetu_planned_trips": 730,
+      "raktsetu_emergency_trips": 220,
+      "raktsetu_total_km": 4967.7
+    },
+    {
+      "param": "vans",
+      "label": "Vans available",
+      "value": 2,
+      "seed": 43,
+      "reactive_rbc_fill_rate": 0.9786,
+      "reactive_plt_fill_rate": 0.8305,
+      "reactive_rbc_wastage_rate": 0.1302,
+      "reactive_plt_wastage_rate": 0.0641,
+      "reactive_rbc_unmet": 456,
+      "reactive_plt_unmet": 2200,
+      "reactive_rbc_expired": 3283,
+      "reactive_plt_expired": 744,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 558,
+      "reactive_total_km": 2205.3,
+      "raktsetu_rbc_fill_rate": 0.9996,
+      "raktsetu_plt_fill_rate": 0.8639,
+      "raktsetu_rbc_wastage_rate": 0.0774,
+      "raktsetu_plt_wastage_rate": 0.0284,
+      "raktsetu_rbc_unmet": 8,
+      "raktsetu_plt_unmet": 1766,
+      "raktsetu_rbc_expired": 1950,
+      "raktsetu_plt_expired": 330,
+      "raktsetu_planned_trips": 769,
+      "raktsetu_emergency_trips": 136,
+      "raktsetu_total_km": 4984.5
+    },
+    {
+      "param": "vans",
+      "label": "Vans available",
+      "value": 2,
+      "seed": 44,
+      "reactive_rbc_fill_rate": 0.9669,
+      "reactive_plt_fill_rate": 0.8543,
+      "reactive_rbc_wastage_rate": 0.0749,
+      "reactive_plt_wastage_rate": 0.0517,
+      "reactive_rbc_unmet": 721,
+      "reactive_plt_unmet": 1838,
+      "reactive_rbc_expired": 1857,
+      "reactive_plt_expired": 591,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 536,
+      "reactive_total_km": 2208.3,
+      "raktsetu_rbc_fill_rate": 0.9975,
+      "raktsetu_plt_fill_rate": 0.8725,
+      "raktsetu_rbc_wastage_rate": 0.0268,
+      "raktsetu_plt_wastage_rate": 0.0317,
+      "raktsetu_rbc_unmet": 54,
+      "raktsetu_plt_unmet": 1609,
+      "raktsetu_rbc_expired": 664,
+      "raktsetu_plt_expired": 362,
+      "raktsetu_planned_trips": 763,
+      "raktsetu_emergency_trips": 153,
+      "raktsetu_total_km": 4783.6
+    },
+    {
+      "param": "vans",
+      "label": "Vans available",
+      "value": 3,
+      "seed": 42,
+      "reactive_rbc_fill_rate": 0.9672,
+      "reactive_plt_fill_rate": 0.8474,
+      "reactive_rbc_wastage_rate": 0.105,
+      "reactive_plt_wastage_rate": 0.0503,
+      "reactive_rbc_unmet": 711,
+      "reactive_plt_unmet": 1974,
+      "reactive_rbc_expired": 2582,
+      "reactive_plt_expired": 576,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 588,
+      "reactive_total_km": 2541.9,
+      "raktsetu_rbc_fill_rate": 0.9943,
+      "raktsetu_plt_fill_rate": 0.8668,
+      "raktsetu_rbc_wastage_rate": 0.0551,
+      "raktsetu_plt_wastage_rate": 0.0289,
+      "raktsetu_rbc_unmet": 124,
+      "raktsetu_plt_unmet": 1723,
+      "raktsetu_rbc_expired": 1355,
+      "raktsetu_plt_expired": 331,
+      "raktsetu_planned_trips": 792,
+      "raktsetu_emergency_trips": 216,
+      "raktsetu_total_km": 5270.9
+    },
+    {
+      "param": "vans",
+      "label": "Vans available",
+      "value": 3,
+      "seed": 43,
+      "reactive_rbc_fill_rate": 0.9786,
+      "reactive_plt_fill_rate": 0.8305,
+      "reactive_rbc_wastage_rate": 0.1302,
+      "reactive_plt_wastage_rate": 0.0641,
+      "reactive_rbc_unmet": 456,
+      "reactive_plt_unmet": 2200,
+      "reactive_rbc_expired": 3283,
+      "reactive_plt_expired": 744,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 558,
+      "reactive_total_km": 2205.3,
+      "raktsetu_rbc_fill_rate": 0.9998,
+      "raktsetu_plt_fill_rate": 0.8658,
+      "raktsetu_rbc_wastage_rate": 0.0762,
+      "raktsetu_plt_wastage_rate": 0.0255,
+      "raktsetu_rbc_unmet": 4,
+      "raktsetu_plt_unmet": 1741,
+      "raktsetu_rbc_expired": 1921,
+      "raktsetu_plt_expired": 296,
+      "raktsetu_planned_trips": 887,
+      "raktsetu_emergency_trips": 144,
+      "raktsetu_total_km": 5488.2
+    },
+    {
+      "param": "vans",
+      "label": "Vans available",
+      "value": 3,
+      "seed": 44,
+      "reactive_rbc_fill_rate": 0.9669,
+      "reactive_plt_fill_rate": 0.8543,
+      "reactive_rbc_wastage_rate": 0.0749,
+      "reactive_plt_wastage_rate": 0.0517,
+      "reactive_rbc_unmet": 721,
+      "reactive_plt_unmet": 1838,
+      "reactive_rbc_expired": 1857,
+      "reactive_plt_expired": 591,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 536,
+      "reactive_total_km": 2208.3,
+      "raktsetu_rbc_fill_rate": 0.9974,
+      "raktsetu_plt_fill_rate": 0.8718,
+      "raktsetu_rbc_wastage_rate": 0.0266,
+      "raktsetu_plt_wastage_rate": 0.0326,
+      "raktsetu_rbc_unmet": 57,
+      "raktsetu_plt_unmet": 1617,
+      "raktsetu_rbc_expired": 660,
+      "raktsetu_plt_expired": 373,
+      "raktsetu_planned_trips": 920,
+      "raktsetu_emergency_trips": 153,
+      "raktsetu_total_km": 5623.2
+    },
+    {
+      "param": "quantile",
+      "label": "Service quantile protected",
+      "value": 0.7,
+      "seed": 42,
+      "reactive_rbc_fill_rate": 0.9672,
+      "reactive_plt_fill_rate": 0.8474,
+      "reactive_rbc_wastage_rate": 0.105,
+      "reactive_plt_wastage_rate": 0.0503,
+      "reactive_rbc_unmet": 711,
+      "reactive_plt_unmet": 1974,
+      "reactive_rbc_expired": 2582,
+      "reactive_plt_expired": 576,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 588,
+      "reactive_total_km": 2541.9,
+      "raktsetu_rbc_fill_rate": 0.9943,
+      "raktsetu_plt_fill_rate": 0.8675,
+      "raktsetu_rbc_wastage_rate": 0.0573,
+      "raktsetu_plt_wastage_rate": 0.0269,
+      "raktsetu_rbc_unmet": 124,
+      "raktsetu_plt_unmet": 1713,
+      "raktsetu_rbc_expired": 1409,
+      "raktsetu_plt_expired": 308,
+      "raktsetu_planned_trips": 750,
+      "raktsetu_emergency_trips": 186,
+      "raktsetu_total_km": 4941.5
+    },
+    {
+      "param": "quantile",
+      "label": "Service quantile protected",
+      "value": 0.7,
+      "seed": 43,
+      "reactive_rbc_fill_rate": 0.9786,
+      "reactive_plt_fill_rate": 0.8305,
+      "reactive_rbc_wastage_rate": 0.1302,
+      "reactive_plt_wastage_rate": 0.0641,
+      "reactive_rbc_unmet": 456,
+      "reactive_plt_unmet": 2200,
+      "reactive_rbc_expired": 3283,
+      "reactive_plt_expired": 744,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 558,
+      "reactive_total_km": 2205.3,
+      "raktsetu_rbc_fill_rate": 0.9996,
+      "raktsetu_plt_fill_rate": 0.8683,
+      "raktsetu_rbc_wastage_rate": 0.0787,
+      "raktsetu_plt_wastage_rate": 0.0228,
+      "raktsetu_rbc_unmet": 9,
+      "raktsetu_plt_unmet": 1709,
+      "raktsetu_rbc_expired": 1984,
+      "raktsetu_plt_expired": 265,
+      "raktsetu_planned_trips": 752,
+      "raktsetu_emergency_trips": 110,
+      "raktsetu_total_km": 4787.3
+    },
+    {
+      "param": "quantile",
+      "label": "Service quantile protected",
+      "value": 0.7,
+      "seed": 44,
+      "reactive_rbc_fill_rate": 0.9669,
+      "reactive_plt_fill_rate": 0.8543,
+      "reactive_rbc_wastage_rate": 0.0749,
+      "reactive_plt_wastage_rate": 0.0517,
+      "reactive_rbc_unmet": 721,
+      "reactive_plt_unmet": 1838,
+      "reactive_rbc_expired": 1857,
+      "reactive_plt_expired": 591,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 536,
+      "reactive_total_km": 2208.3,
+      "raktsetu_rbc_fill_rate": 0.9976,
+      "raktsetu_plt_fill_rate": 0.8749,
+      "raktsetu_rbc_wastage_rate": 0.0295,
+      "raktsetu_plt_wastage_rate": 0.0289,
+      "raktsetu_rbc_unmet": 52,
+      "raktsetu_plt_unmet": 1578,
+      "raktsetu_rbc_expired": 732,
+      "raktsetu_plt_expired": 330,
+      "raktsetu_planned_trips": 793,
+      "raktsetu_emergency_trips": 142,
+      "raktsetu_total_km": 4860.0
+    },
+    {
+      "param": "quantile",
+      "label": "Service quantile protected",
+      "value": 0.8,
+      "seed": 42,
+      "reactive_rbc_fill_rate": 0.9672,
+      "reactive_plt_fill_rate": 0.8474,
+      "reactive_rbc_wastage_rate": 0.105,
+      "reactive_plt_wastage_rate": 0.0503,
+      "reactive_rbc_unmet": 711,
+      "reactive_plt_unmet": 1974,
+      "reactive_rbc_expired": 2582,
+      "reactive_plt_expired": 576,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 588,
+      "reactive_total_km": 2541.9,
+      "raktsetu_rbc_fill_rate": 0.9942,
+      "raktsetu_plt_fill_rate": 0.8688,
+      "raktsetu_rbc_wastage_rate": 0.0561,
+      "raktsetu_plt_wastage_rate": 0.0261,
+      "raktsetu_rbc_unmet": 125,
+      "raktsetu_plt_unmet": 1697,
+      "raktsetu_rbc_expired": 1380,
+      "raktsetu_plt_expired": 299,
+      "raktsetu_planned_trips": 747,
+      "raktsetu_emergency_trips": 215,
+      "raktsetu_total_km": 5033.2
+    },
+    {
+      "param": "quantile",
+      "label": "Service quantile protected",
+      "value": 0.8,
+      "seed": 43,
+      "reactive_rbc_fill_rate": 0.9786,
+      "reactive_plt_fill_rate": 0.8305,
+      "reactive_rbc_wastage_rate": 0.1302,
+      "reactive_plt_wastage_rate": 0.0641,
+      "reactive_rbc_unmet": 456,
+      "reactive_plt_unmet": 2200,
+      "reactive_rbc_expired": 3283,
+      "reactive_plt_expired": 744,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 558,
+      "reactive_total_km": 2205.3,
+      "raktsetu_rbc_fill_rate": 0.9996,
+      "raktsetu_plt_fill_rate": 0.8663,
+      "raktsetu_rbc_wastage_rate": 0.0766,
+      "raktsetu_plt_wastage_rate": 0.0247,
+      "raktsetu_rbc_unmet": 8,
+      "raktsetu_plt_unmet": 1735,
+      "raktsetu_rbc_expired": 1932,
+      "raktsetu_plt_expired": 287,
+      "raktsetu_planned_trips": 751,
+      "raktsetu_emergency_trips": 142,
+      "raktsetu_total_km": 4831.5
+    },
+    {
+      "param": "quantile",
+      "label": "Service quantile protected",
+      "value": 0.8,
+      "seed": 44,
+      "reactive_rbc_fill_rate": 0.9669,
+      "reactive_plt_fill_rate": 0.8543,
+      "reactive_rbc_wastage_rate": 0.0749,
+      "reactive_plt_wastage_rate": 0.0517,
+      "reactive_rbc_unmet": 721,
+      "reactive_plt_unmet": 1838,
+      "reactive_rbc_expired": 1857,
+      "reactive_plt_expired": 591,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 536,
+      "reactive_total_km": 2208.3,
+      "raktsetu_rbc_fill_rate": 0.9973,
+      "raktsetu_plt_fill_rate": 0.8729,
+      "raktsetu_rbc_wastage_rate": 0.0271,
+      "raktsetu_plt_wastage_rate": 0.0314,
+      "raktsetu_rbc_unmet": 58,
+      "raktsetu_plt_unmet": 1604,
+      "raktsetu_rbc_expired": 671,
+      "raktsetu_plt_expired": 359,
+      "raktsetu_planned_trips": 783,
+      "raktsetu_emergency_trips": 163,
+      "raktsetu_total_km": 4936.1
+    },
+    {
+      "param": "quantile",
+      "label": "Service quantile protected",
+      "value": 0.9,
+      "seed": 42,
+      "reactive_rbc_fill_rate": 0.9672,
+      "reactive_plt_fill_rate": 0.8474,
+      "reactive_rbc_wastage_rate": 0.105,
+      "reactive_plt_wastage_rate": 0.0503,
+      "reactive_rbc_unmet": 711,
+      "reactive_plt_unmet": 1974,
+      "reactive_rbc_expired": 2582,
+      "reactive_plt_expired": 576,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 588,
+      "reactive_total_km": 2541.9,
+      "raktsetu_rbc_fill_rate": 0.9941,
+      "raktsetu_plt_fill_rate": 0.866,
+      "raktsetu_rbc_wastage_rate": 0.0533,
+      "raktsetu_plt_wastage_rate": 0.0296,
+      "raktsetu_rbc_unmet": 128,
+      "raktsetu_plt_unmet": 1733,
+      "raktsetu_rbc_expired": 1310,
+      "raktsetu_plt_expired": 339,
+      "raktsetu_planned_trips": 715,
+      "raktsetu_emergency_trips": 254,
+      "raktsetu_total_km": 4976.2
+    },
+    {
+      "param": "quantile",
+      "label": "Service quantile protected",
+      "value": 0.9,
+      "seed": 43,
+      "reactive_rbc_fill_rate": 0.9786,
+      "reactive_plt_fill_rate": 0.8305,
+      "reactive_rbc_wastage_rate": 0.1302,
+      "reactive_plt_wastage_rate": 0.0641,
+      "reactive_rbc_unmet": 456,
+      "reactive_plt_unmet": 2200,
+      "reactive_rbc_expired": 3283,
+      "reactive_plt_expired": 744,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 558,
+      "reactive_total_km": 2205.3,
+      "raktsetu_rbc_fill_rate": 0.9996,
+      "raktsetu_plt_fill_rate": 0.8624,
+      "raktsetu_rbc_wastage_rate": 0.0739,
+      "raktsetu_plt_wastage_rate": 0.0297,
+      "raktsetu_rbc_unmet": 9,
+      "raktsetu_plt_unmet": 1786,
+      "raktsetu_rbc_expired": 1863,
+      "raktsetu_plt_expired": 344,
+      "raktsetu_planned_trips": 772,
+      "raktsetu_emergency_trips": 194,
+      "raktsetu_total_km": 5208.7
+    },
+    {
+      "param": "quantile",
+      "label": "Service quantile protected",
+      "value": 0.9,
+      "seed": 44,
+      "reactive_rbc_fill_rate": 0.9669,
+      "reactive_plt_fill_rate": 0.8543,
+      "reactive_rbc_wastage_rate": 0.0749,
+      "reactive_plt_wastage_rate": 0.0517,
+      "reactive_rbc_unmet": 721,
+      "reactive_plt_unmet": 1838,
+      "reactive_rbc_expired": 1857,
+      "reactive_plt_expired": 591,
+      "reactive_planned_trips": 0,
+      "reactive_emergency_trips": 536,
+      "reactive_total_km": 2208.3,
+      "raktsetu_rbc_fill_rate": 0.9971,
+      "raktsetu_plt_fill_rate": 0.871,
+      "raktsetu_rbc_wastage_rate": 0.0245,
+      "raktsetu_plt_wastage_rate": 0.0332,
+      "raktsetu_rbc_unmet": 64,
+      "raktsetu_plt_unmet": 1628,
+      "raktsetu_rbc_expired": 606,
+      "raktsetu_plt_expired": 379,
+      "raktsetu_planned_trips": 764,
+      "raktsetu_emergency_trips": 197,
+      "raktsetu_total_km": 5093.4
+    }
+  ],
+  "reproducibility": {
+    "rbc_unmet": [
+      126,
+      119
+    ],
+    "plt_unmet": [
+      1702,
+      1707
+    ],
+    "rbc_expired": [
+      1374,
+      1368
+    ],
+    "plt_expired": [
+      305,
+      303
+    ],
+    "planned_trips": [
+      722,
+      733
+    ]
+  },
+  "runtime_s": 489.9
+}

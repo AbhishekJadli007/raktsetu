@@ -1,0 +1,112 @@
+RaktSetu transfer plan for 2026-10-10
+============================================================
+8 trips moving 365 units today. 83 bank-product combinations are below their protected level; 133 units across the city are at risk of expiring unused.
+
+1. SEVAYTAN -> SMS  (6.8 km, ~6 min)  23 x AB+, 14 x B+, 9 x O+, 2 x A-, 2 x B-
+     - SMS holds 2 AB+ red cells but expects ~20 requests in the next 5 days (protecting against up to 24).
+     - SEVAYTAN has 7 AB+ red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+     - SMS holds 18 B+ red cells but expects ~66 requests in the next 5 days (protecting against up to 75).
+     - SEVAYTAN has 14 B+ red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+     - SMS holds 36 O+ red cells but expects ~71 requests in the next 5 days (protecting against up to 81).
+     - SEVAYTAN has 8 O+ red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+     - SMS holds 0 A- red cells but expects ~4 requests in the next 5 days (protecting against up to 6).
+     - SEVAYTAN keeps its own protected need and can spare 5 A- red cells.
+     - SMS holds 1 B- red cells but expects ~2 requests in the next 5 days (protecting against up to 4).
+     - SEVAYTAN keeps its own protected need and can spare 9 B- red cells.
+2. SKSONI -> SMS  (10.8 km, ~11 min)  32 x A+, 12 x B+, 3 x O+, 3 x O-
+     - SMS holds 10 A+ red cells but expects ~48 requests in the next 5 days (protecting against up to 56).
+     - SKSONI has 5 A+ red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+     - SMS holds 18 B+ red cells but expects ~66 requests in the next 5 days (protecting against up to 75).
+     - SKSONI keeps its own protected need and can spare 50 B+ red cells.
+     - SMS holds 36 O+ red cells but expects ~71 requests in the next 5 days (protecting against up to 81).
+     - SKSONI has 3 O+ red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+     - SMS holds 4 O- red cells but expects ~5 requests in the next 5 days (protecting against up to 7).
+     - SKSONI keeps its own protected need and can spare 3 O- red cells.
+3. SEVAYTAN -> MGNIMS  (22.8 km, ~21 min)  18 x O+, 18 x B+, 5 x PLT, 4 x O-, 3 x A+, 2 x A-
+     - MGNIMS holds 15 O+ red cells but expects ~27 requests in the next 5 days (protecting against up to 33).
+     - SEVAYTAN has 8 O+ red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+     - MGNIMS holds 12 B+ red cells but expects ~24 requests in the next 5 days (protecting against up to 29).
+     - SEVAYTAN has 14 B+ red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+     - MGNIMS holds 26 platelets but expects ~26 requests in the next 3 days (protecting against up to 33).
+     - SEVAYTAN has 4 platelets likely to expire unused within 3 days, so moving them saves units that would otherwise be discarded.
+     - MGNIMS holds 0 O- red cells but expects ~3 requests in the next 5 days (protecting against up to 4).
+     - SEVAYTAN keeps its own protected need and can spare 4 O- red cells.
+     - MGNIMS holds 18 A+ red cells but expects ~16 requests in the next 5 days (protecting against up to 20).
+     - SEVAYTAN keeps its own protected need and can spare 103 A+ red cells.
+     - MGNIMS holds 1 A- red cells but expects ~1 requests in the next 5 days (protecting against up to 2).
+     - SEVAYTAN keeps its own protected need and can spare 5 A- red cells.
+4. SKBB -> NARAYANA  (9.1 km, ~9 min)  18 x B+, 15 x O+, 12 x PLT, 3 x A+, 2 x A-
+     - NARAYANA holds 5 B+ red cells but expects ~18 requests in the next 5 days (protecting against up to 22).
+     - SKBB keeps its own protected need and can spare 67 B+ red cells.
+     - NARAYANA holds 4 O+ red cells but expects ~20 requests in the next 5 days (protecting against up to 25).
+     - SKBB keeps its own protected need and can spare 30 O+ red cells.
+     - NARAYANA holds 8 platelets but expects ~17 requests in the next 3 days (protecting against up to 22).
+     - SKBB has 6 platelets likely to expire unused within 3 days, so moving them saves units that would otherwise be discarded.
+     - NARAYANA holds 13 A+ red cells but expects ~13 requests in the next 5 days (protecting against up to 16).
+     - SKBB keeps its own protected need and can spare 113 A+ red cells.
+     - NARAYANA holds 0 A- red cells but expects ~1 requests in the next 5 days (protecting against up to 1).
+     - SKBB has 1 A- red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+5. METRO -> FORTIS  (6.5 km, ~10 min)  20 x O+, 16 x A+, 11 x B+, 3 x B-
+     - FORTIS holds 8 O+ red cells but expects ~23 requests in the next 5 days (protecting against up to 27).
+     - METRO keeps its own protected need and can spare 31 O+ red cells.
+     - FORTIS holds 1 A+ red cells but expects ~13 requests in the next 5 days (protecting against up to 16).
+     - METRO keeps its own protected need and can spare 17 A+ red cells.
+     - FORTIS holds 11 B+ red cells but expects ~18 requests in the next 5 days (protecting against up to 22).
+     - METRO keeps its own protected need and can spare 44 B+ red cells.
+     - FORTIS holds 0 B- red cells but expects ~1 requests in the next 5 days (protecting against up to 2).
+     - METRO keeps its own protected need and can spare 4 B- red cells.
+6. PUSHPA -> SMS  (7.7 km, ~8 min)  32 x B+, 14 x A+, 4 x A-
+     - SMS holds 18 B+ red cells but expects ~66 requests in the next 5 days (protecting against up to 75).
+     - PUSHPA has 15 B+ red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+     - SMS holds 10 A+ red cells but expects ~48 requests in the next 5 days (protecting against up to 56).
+     - PUSHPA has 14 A+ red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+     - SMS holds 0 A- red cells but expects ~4 requests in the next 5 days (protecting against up to 6).
+     - PUSHPA keeps its own protected need and can spare 4 A- red cells.
+7. PUSHPA -> MAHILA  (7.2 km, ~7 min)  20 x O+, 19 x B+, 3 x O-, 2 x AB+, 2 x B-
+     - MAHILA holds 1 O+ red cells but expects ~17 requests in the next 5 days (protecting against up to 20).
+     - PUSHPA has 21 O+ red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+     - MAHILA holds 2 B+ red cells but expects ~17 requests in the next 5 days (protecting against up to 21).
+     - PUSHPA has 15 B+ red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+     - MAHILA holds 0 O- red cells but expects ~1 requests in the next 5 days (protecting against up to 2).
+     - PUSHPA has 1 O- red cells likely to expire unused within 7 days, so moving them saves units that would otherwise be discarded.
+     - MAHILA holds 3 AB+ red cells but expects ~3 requests in the next 5 days (protecting against up to 5).
+     - PUSHPA keeps its own protected need and can spare 25 AB+ red cells.
+     - MAHILA holds 0 B- red cells but expects ~1 requests in the next 5 days (protecting against up to 2).
+     - PUSHPA keeps its own protected need and can spare 3 B- red cells.
+8. SMS -> SDMH  (1.7 km, ~2 min)  19 x PLT
+     - SDMH holds 3 platelets but expects ~26 requests in the next 3 days (protecting against up to 33).
+     - SMS has 11 platelets likely to expire unused within 3 days, so moving them saves units that would otherwise be discarded.
+
+Needs donors, not vans:
+  ! Arrange 38 more platelets for BMCHRC (platelet donors or apheresis slots): no bank within reach can spare them without risking its own patients.
+  ! Arrange 21 more platelets for FORTIS (platelet donors or apheresis slots): no bank within reach can spare them without risking its own patients.
+  ! Arrange 12 more platelets for JAIPURIA (platelet donors or apheresis slots): no bank within reach can spare them without risking its own patients.
+  ! Arrange 12 more platelets for MONILEK (platelet donors or apheresis slots): no bank within reach can spare them without risking its own patients.
+  ! Arrange 34 more O+ red cells for SMS (call registered donors): no bank within reach can spare them without risking its own patients.
+  ! Arrange 11 more platelets for SDMH (platelet donors or apheresis slots): no bank within reach can spare them without risking its own patients.
+  ! Arrange 10 more platelets for LIFECARE (platelet donors or apheresis slots): no bank within reach can spare them without risking its own patients.
+  ! Arrange 9 more platelets for METRO (platelet donors or apheresis slots): no bank within reach can spare them without risking its own patients.
+  ! Arrange 8 more platelets for MAHILA (platelet donors or apheresis slots): no bank within reach can spare them without risking its own patients.
+  ! Arrange 8 more platelets for SKSONI (platelet donors or apheresis slots): no bank within reach can spare them without risking its own patients.
+  ! Arrange 6 more platelets for PUSHPA (platelet donors or apheresis slots): no bank within reach can spare them without risking its own patients.
+  ! Arrange 17 more A+ red cells for SDMH (call registered donors): no bank within reach can spare them without risking its own patients.
+
+bank         RBC  RBC days   PLT  PLT days  at risk  short
+SMS           72       1.7    93       4.6       11  O+, A+, B+, AB+, O-, A-, B-, AB-
+MGNIMS        57       3.6    26       3.0        0  O+, A+, B+, AB+, O-, A-, PLT
+SDMH          62       4.4     3       0.3        0  O+, A+, B+, O-, PLT
+NARAYANA      23       2.0     8       1.4        0  O+, A+, B+, AB+, O-, A-, B-, AB-, PLT
+FORTIS        22       1.8     4       0.6        0  O+, A+, B+, AB+, O-, B-, AB-, PLT
+BMCHRC        81       6.6     5       0.4        0  O+, A+, A-, B-, PLT
+ZANANA        38       3.9     8       5.5        2  O+, A+, B+, AB+, O-, B-, AB-
+JAIPURIA      49       4.9     3       0.8        0  O+, A+, B+, O-, A-, AB-, PLT
+MAHILA        19       1.9     1       0.5        0  O+, B+, AB+, O-, A-, B-, AB-, PLT
+APEX         256      38.9    12       4.0        0  A-, PLT
+MONILEK       33       5.0     4       1.0        0  O+, A+, B+, O-, AB-, PLT
+METRO        143      24.4     4       1.3        0  A-, AB-, PLT
+LIFECARE      49      11.1     0       0.0        0  AB+, AB-, PLT
+PUSHPA       376     125.6     0       0.0       51  PLT
+SKSONI       268      46.4     5       1.6        8  PLT
+SKBB         312      21.6    26       7.9        7  AB+, O-
+AGRASEN      425     108.4     5       3.0       21  PLT
+SEVAYTAN     565     115.6    14       7.0       33  
