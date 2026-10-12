@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Node / build
+web/node_modules/
+web/dist/
+web/*.tsbuildinfo
+web/node_modules/.tmp/
+# Generated (reproducible with `python data/generate.py`)
+data/generated/
+artifacts/*.log
+# Secrets / local
+.env
+.DS_Store
