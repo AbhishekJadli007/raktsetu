@@ -1,0 +1,19 @@
+osm_type,osm_id,name,lat,lon,operator_type
+node,6885045796,Mahatama Gandhi National Institute of Medical Sciences (MGNIMS) Blood Bank,26.76981,75.85452,private
+node,6895218082,Pushpa Devi Memorial Blood Bank,26.93891,75.78113,ngo
+node,6895218157,Monilek Hospital and Research Center Blood Bank,26.88698,75.83413,ngo
+node,6897677425,Jaipuria Hospital Blood Bank,26.85721,75.80057,government
+node,6903003016,Narayana Multispeciality Hospital Blood bank,26.79503,75.82447,private
+node,6903003057,Apex Swasthya Kalyan Blood Bank,26.85461,75.82526,private
+node,6903003063,Fortis Escorts Hospital Blood Bank,26.84624,75.80335,private
+node,6903003064,Bhagwan Mahaveer Cancer Hospital & Research Centre Blood Bank,26.86315,75.80545,ngo
+node,6903003070,Metro Blood Bank,26.86815,75.76831,private
+node,6903003075,Sevaytan Swasthay Kalyan Blood Bank,26.90121,75.7703,ngo
+node,6903003080,Life care Blood Bank,26.96794,75.76633,private
+node,6903003085,S.K. Soni Blood Bank,26.96788,75.77301,ngo
+node,6903003086,Agrasen Blood Bank,26.9664,75.78412,ngo
+node,6903003087,Zanana Hospital Blood Bank,26.92645,75.80668,government
+node,6903003088,Swasthya Kalyan Blood Bank and Thalesemia Research Center,26.85672,75.79906,ngo
+node,6903003093,Government Mahila Chikitsalaya Blood Bank,26.91477,75.82457,government
+node,6903003098,Sawai Man Singh (S.M.S) Hospital Blood Bank,26.90592,75.81611,government
+node,6903003099,Santokba Durlabhji Medical Hopsital Blood bank,26.89466,75.81318,ngo

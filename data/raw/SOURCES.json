@@ -1,0 +1,9 @@
+{
+  "fetched_at": "2026-10-12T15:57:53",
+  "sources": {
+    "blood_banks_jaipur_osm.csv": "OpenStreetMap contributors, via Overpass API. Licence: ODbL 1.0",
+    "travel_matrix_osrm.csv": "OSRM demo server on OpenStreetMap road data. Licence: ODbL 1.0",
+    "weather_jaipur_openmeteo.csv": "Open-Meteo historical weather API (ERA5 reanalysis). Licence: CC BY 4.0"
+  },
+  "overpass_query": "[out:json][timeout:90];\n(\n  nwr[\"healthcare\"=\"blood_donation\"](26.7, 75.6, 27.1, 76.05);\n  nwr[\"healthcare\"=\"blood_bank\"](26.7, 75.6, 27.1, 76.05);\n  nwr[\"amenity\"=\"blood_bank\"](26.7, 75.6, 27.1, 76.05);\n  nwr[\"name\"~\"[Bb]lood [Bb]ank\"](26.7, 75.6, 27.1, 76.05);\n);\nout center tags;"
+}
