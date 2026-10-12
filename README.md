@@ -4,9 +4,20 @@
 
 Open source (MIT) · Python · OR-Tools · scikit-learn · FastAPI · React · Built for COMMIT FOR GOOD 2026
 
-<!-- LIVE_DEMO -->
+**Live demo:** https://abhishekjadli007-raktsetu.hf.space · [Hugging Face Space](https://huggingface.co/spaces/AbhishekJadli007/raktsetu)
 
 ---
+
+## Documents
+
+| Read this | For |
+|---|---|
+| [Project explainer](docs/PROJECT_EXPLAINER.md) ([PDF](docs/pdf/RaktSetu_Project_Explainer.pdf)) | What RaktSetu does and what it is trying to achieve, end to end, in plain language |
+| [Solution brief](docs/SOLUTION_BRIEF.md) ([PDF](docs/pdf/RaktSetu_Solution_Brief.pdf)) | The 2-page submission summary |
+| [Evaluation](docs/EVALUATION.md) | Every result, baseline, seed and sensitivity run |
+| [Data and assumptions](data/ASSUMPTIONS.md) | What is real, what is generated, and why each number was chosen |
+| [Architecture](docs/ARCHITECTURE.md) | Components, the optimisation model, the simulator |
+| [Round 1 (A/B/C)](docs/ROUND1.md) · [Demo script](docs/DEMO_SCRIPT.md) | How the idea was refined; the demo walkthrough and likely judge questions |
 
 ## The problem
 

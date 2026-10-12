@@ -5,12 +5,15 @@ Values tagged [GUESS] are our assumptions; the sensitivity analysis varies the i
 """
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 GENERATED = ROOT / "data" / "generated"
 ARTIFACTS = ROOT / "artifacts"
+# Trained models live here; override with RAKTSETU_MODEL_DIR (e.g. a writable folder on a host).
+MODEL_DIR = Path(os.environ.get("RAKTSETU_MODEL_DIR", ARTIFACTS))
 
 SEED = 42
 

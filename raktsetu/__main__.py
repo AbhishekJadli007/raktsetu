@@ -43,7 +43,8 @@ def main(argv=None):
 
     sub.add_parser("fetch", help="re-download real inputs (OSM, OSRM, Open-Meteo)")
     sub.add_parser("generate", help="write the synthetic world to data/generated/")
-    sub.add_parser("train", help="train the demand forecaster and surge radar")
+    p = sub.add_parser("train", help="train the demand forecaster and surge radar")
+    p.add_argument("--no-eval", action="store_true", help="only train and save the models (skip the metrics)")
     p = sub.add_parser("precompute", help="save the web demo flows to artifacts/cache/ (for small servers)")
     p.add_argument("--fresh", action="store_true", help="recompute everything (after changing the engine)")
     p = sub.add_parser("evaluate", help="full evaluation -> docs/EVALUATION.md")
@@ -87,13 +88,14 @@ def main(argv=None):
         print("Training demand forecaster (train 2016-2022, validate 2023) ...")
         ml, info = forecast.train(w)
         ml.save()
-        print(f"  saved artifacts/forecaster.joblib  {info}  dispersion k={ml.k.round(2).tolist()}")
-        m = forecast.evaluate_forecasters(w, ml)
-        forecast.save_metrics(m)
+        print(f"  saved {forecast.MODEL_PATH}  {info}  dispersion k={ml.k.round(2).tolist()}")
+        if not a.no_eval:
+            forecast.save_metrics(forecast.evaluate_forecasters(w, ml))
         print("Training surge radar ...")
         surge.train(w)
-        surge.save_eval(surge.evaluate(w))
-        print("  saved artifacts/surge_radar.joblib")
+        print(f"  saved {surge.MODEL_PATH}")
+        if not a.no_eval:
+            surge.save_eval(surge.evaluate(w))
 
     elif a.cmd == "precompute":
         from api.main import precompute

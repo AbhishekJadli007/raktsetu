@@ -21,7 +21,7 @@ from .world import World
 WEEKS = 4
 FEATURES = ["k", "ma7", "ma28", "trend", "doy_sin", "doy_cos",
             "rain_0_14", "rain_14_28", "rain_28_56", "rain_56_84", "temp_14", "temp_28_56", "hum_14"]
-MODEL_PATH = C.ARTIFACTS / "surge_radar.joblib"
+MODEL_PATH = C.MODEL_DIR / "surge_radar.joblib"
 
 
 def city_platelets(w: World) -> np.ndarray:

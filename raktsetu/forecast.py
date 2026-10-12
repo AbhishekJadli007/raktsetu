@@ -29,7 +29,7 @@ FEATURES = [
     "rain_0_14", "rain_14_28", "rain_28_56", "rain_56_84", "temp_14", "temp_28_56", "hum_14",
 ]
 WEATHER_FEATURES = ["rain_0_14", "rain_14_28", "rain_28_56", "rain_56_84", "temp_14", "temp_28_56", "hum_14"]
-MODEL_PATH = C.ARTIFACTS / "forecaster.joblib"
+MODEL_PATH = C.MODEL_DIR / "forecaster.joblib"
 METRICS_PATH = C.ARTIFACTS / "forecast_metrics.json"
 
 

@@ -7,6 +7,9 @@ The demo flows are precomputed in `artifacts/cache/`, so even a small server ans
 
 Hugging Face **Docker** Spaces are paid, but **Gradio** Spaces on *CPU basic* (2 vCPU, 16 GB) are free.
 A Gradio Space just runs `python app.py`, so `deploy/hf_app.py` uses it to start our FastAPI server. We don't use Gradio's UI.
+The Space installs `deploy/requirements-space.txt` (works on Python 3.10 and 3.11) and ships the models in `deploy/space-models/`,
+trained with those library versions. If you retrain, refresh them with `RAKTSETU_MODEL_DIR=deploy/space-models python -m raktsetu train --no-eval`
+inside a Python 3.10 or 3.11 environment that has `deploy/requirements-space.txt` installed.
 
 1. Sign up at https://huggingface.co/join and verify your email.
 2. Create a token at https://huggingface.co/settings/tokens: *Create new token*, type **Write**, create, and copy it (starts with `hf_`).
@@ -35,3 +38,9 @@ The free plan has very little CPU: precomputed demo flows are instant, but custo
 docker build -t raktsetu .
 docker run -p 8000:8000 raktsetu      # http://localhost:8000
 ```
+
+## Troubleshooting
+
+- **Build log starts with `FROM python:3.10.13` and installs `torch`, then fails on `numpy==2.4.6`:** the Space is on **ZeroGPU** hardware, which forces Python 3.10. Run `python deploy/huggingface.py` again (it switches the Space to *CPU basic*), or go to Space → **Settings** → **Space hardware** → **CPU basic (free)** → *Confirm*.
+- **Page says "Runtime error":** open the **Logs** tab → *Container*. The last lines name the problem.
+- **First load is slow:** a sleeping Space takes about 1 minute to wake up.

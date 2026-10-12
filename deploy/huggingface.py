@@ -65,6 +65,16 @@ def stage(dst: Path) -> str:
         t.extractall(dst, filter="data")
     shutil.copytree(ROOT / "web" / "dist", dst / "web" / "dist", dirs_exist_ok=True)
     shutil.copy(ROOT / "deploy" / "hf_app.py", dst / "app.py")
+    # The Space must build on Python 3.10 (ZeroGPU) or 3.11 (CPU basic): use the Space requirements and the
+    # models trained with those library versions, never the local ones (scikit-learn pickles are version-bound).
+    shutil.copy(ROOT / "deploy" / "requirements-space.txt", dst / "requirements.txt")
+    for f in ("forecaster.joblib", "surge_radar.joblib"):
+        (dst / "artifacts" / f).unlink(missing_ok=True)
+        src = ROOT / "deploy" / "space-models" / f
+        if src.exists():
+            shutil.copy(src, dst / "artifacts" / f)
+    for pdf in dst.rglob("*.pdf"):
+        pdf.unlink()
     readme = dst / "README.md"
     readme.write_text(HEADER + readme.read_text())
     return sha
@@ -96,10 +106,17 @@ def main():
     me = api.whoami()["name"]
     repo_id = f"{a.user or me}/{a.space}"
     print(f"  logged in as {me}; deploying to {repo_id}")
-    api.create_repo(repo_id, repo_type="space", space_sdk="gradio", exist_ok=True)
+    api.create_repo(repo_id, repo_type="space", space_sdk="gradio", space_hardware="cpu-basic", exist_ok=True)
     api.upload_folder(folder_path=str(dst), repo_id=repo_id, repo_type="space",
                       commit_message=f"Deploy RaktSetu {sha}", delete_patterns=["*"])
     shutil.rmtree(dst, ignore_errors=True)
+    # Must be the free CPU tier: ZeroGPU ('zero-a10g') forces Python 3.10 + PyTorch and ignores python_version.
+    rt = api.get_space_runtime(repo_id)
+    if rt.requested_hardware != "cpu-basic":
+        print(f"  switching hardware from {rt.requested_hardware} to cpu-basic (free, Python 3.11)")
+        api.request_space_hardware(repo_id, "cpu-basic")
+    else:
+        print("  hardware: cpu-basic (free)")
     sub = repo_id.lower().replace("/", "-").replace("_", "-").replace(".", "-")
     print()
     print(f"Uploaded. Watch it build (3-6 min): https://huggingface.co/spaces/{repo_id}")
